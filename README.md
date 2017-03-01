@@ -86,6 +86,7 @@ These are the whole methods you can use to customize default sharer view control
     func setShareTitleTextColor(color:UIColor)
     func setShareDescriptionTextColor(color:UIColor)
     func setShareButtonTitleColor(color:UIColor)
+    func setShareButtonBackgroundColor(color:UIColor)
 ```
 #### Designing Your Own Sharer View Controller
 In some cases you may want to design whole sharer view controller from stratch. To do this your sharer view controller should extend ScreenshotSharerViewController class and you should register it to ScreenshotSharer instance.

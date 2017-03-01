@@ -100,6 +100,11 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
         self.shareButton.setTitleColor(color, for: .normal)
     }
     
+    override open func setShareButtonBackgroundColor(color: UIColor)
+    {
+        super.setShareButtonBackgroundColor(color: color)
+        self.shareButton.backgroundColor = color
+    }
     
     @IBAction func shareButtonAction(_ sender: Any)
     {

@@ -23,6 +23,7 @@ public protocol ScreenshotSharerViewControllerProtocol
     func setShareTitleTextColor(color:UIColor)
     func setShareDescriptionTextColor(color:UIColor)
     func setShareButtonTitleColor(color:UIColor)
+    func setShareButtonBackgroundColor(color:UIColor)
 }
 
 open class ScreenshotSharerViewController: UIViewController, ScreenshotSharerViewControllerProtocol
@@ -75,6 +76,11 @@ open class ScreenshotSharerViewController: UIViewController, ScreenshotSharerVie
     }
     
     open func setShareButtonTitleColor(color:UIColor)
+    {
+        
+    }
+    
+    open func setShareButtonBackgroundColor(color:UIColor)
     {
         
     }
