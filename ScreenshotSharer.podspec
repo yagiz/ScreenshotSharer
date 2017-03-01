@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ScreenshotSharer'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'SSSharer is a little Swift 3.0 pod that enables users to share screenshot image quickly.'
  
   s.description      = <<-DESC
