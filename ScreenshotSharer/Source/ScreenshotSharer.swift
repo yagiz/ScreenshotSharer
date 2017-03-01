@@ -20,7 +20,7 @@ open class ScreenshotSharer: NSObject
     open var captureBlock:((UIImage?,ScreenshotSharerViewController?) -> ())!
     open var isEnabled:Bool = true
     
-    override init()
+    override public init()
     {
         super.init()
         NotificationCenter.default.addObserver(self, selector: #selector(self.applicationUserDidTakeScreenshot(notification:)), name: NSNotification.Name.UIApplicationUserDidTakeScreenshot, object: nil)
