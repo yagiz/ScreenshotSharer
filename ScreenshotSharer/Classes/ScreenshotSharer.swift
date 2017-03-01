@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ScreenshotSharer: NSObject
+open class ScreenshotSharer: NSObject
 {
-    static let shared : ScreenshotSharer = {
+    open static let shared : ScreenshotSharer = {
         let instance = ScreenshotSharer()
         return instance
     }()

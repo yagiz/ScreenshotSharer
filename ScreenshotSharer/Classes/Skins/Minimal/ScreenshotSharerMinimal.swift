@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScreenshotSharerMinimal: ScreenshotSharerViewController {
+open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
     
     @IBOutlet weak var screenshotImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -17,12 +17,12 @@ class ScreenshotSharerMinimal: ScreenshotSharerViewController {
     
     @IBOutlet weak var imageViewRatioConstraint: NSLayoutConstraint!
     
-    override func viewDidLoad()
+    override open func viewDidLoad()
     {
         super.viewDidLoad()
     }
     
-    override func setScreenshotImage(image: UIImage)
+    override open func setScreenshotImage(image: UIImage)
     {
         self.screenshotImageView.image = image
         
@@ -43,38 +43,38 @@ class ScreenshotSharerMinimal: ScreenshotSharerViewController {
     
     
     
-    override func setShareTitle(title: String)
+    override open func setShareTitle(title: String)
     {
         super.setShareTitle(title: title)
         self.titleLabel.text = title
     }
     
-    override func setShareDescription(description: String)
+    override open func setShareDescription(description: String)
     {
         super.setShareDescription(description: description)
         self.descriptionLabel.text = description
     }
     
-    override func setShareButtonTitle(title: String)
+    override open func setShareButtonTitle(title: String)
     {
         super.setShareButtonTitle(title: title)
         self.shareButton.setTitle(title, for: .normal)
     }
     
     
-    override func setShareTitleFont(font: UIFont)
+    override open func setShareTitleFont(font: UIFont)
     {
         super.setShareTitleFont(font: font)
         self.titleLabel.font = font
     }
     
-    override func setShareDescriptionFont(font: UIFont)
+    override open func setShareDescriptionFont(font: UIFont)
     {
         super.setShareDescriptionFont(font: font)
         self.descriptionLabel.font = font
     }
     
-    override func setShareButtonTitleFont(font: UIFont)
+    override open func setShareButtonTitleFont(font: UIFont)
     {
         super.setShareButtonTitleFont(font: font)
         self.shareButton.titleLabel?.font = font

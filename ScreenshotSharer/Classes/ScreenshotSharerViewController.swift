@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ScreenshotSharerViewControllerProtocol
+public protocol ScreenshotSharerViewControllerProtocol
 {
     func setScreenshotImage(image:UIImage)
     
@@ -21,7 +21,7 @@ protocol ScreenshotSharerViewControllerProtocol
     func setShareButtonTitleFont(font:UIFont)
 }
 
-class ScreenshotSharerViewController: UIViewController, ScreenshotSharerViewControllerProtocol
+open class ScreenshotSharerViewController: UIViewController, ScreenshotSharerViewControllerProtocol
 {
     var screenshotImage:UIImage!
     var shareTitle:String!
