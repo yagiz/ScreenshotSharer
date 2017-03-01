@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     {
         super.viewWillAppear(animated)
         
-        //If you want to enable ScreenshotSharer in spesific views only, you shouldn't forget to unregister it when view is disappeared.
+        //If you want to enable ScreenshotSharer in spesific views, you should don't forget to unregister it when view is disappeared.
         sssharer.unregister()
     }
 }
@@ -75,8 +75,6 @@ sssharer.registerViewCapturer(view: self.view, cropRect: CGRect.zero, sender: se
 ```
 These are the whole methods you can use to customize default sharer view controller.
 ```swift
-    func setScreenshotImage(image:UIImage)
-
     func setShareTitle(title:String)
     func setShareDescription(description:String)
     func setShareButtonTitle(title:String)
@@ -84,6 +82,10 @@ These are the whole methods you can use to customize default sharer view control
     func setShareTitleFont(font:UIFont)
     func setShareDescriptionFont(font:UIFont)
     func setShareButtonTitleFont(font:UIFont)
+    
+    func setShareTitleTextColor(color:UIColor)
+    func setShareDescriptionTextColor(color:UIColor)
+    func setShareButtonTitleColor(color:UIColor)
 ```
 #### Designing Your Own Sharer View Controller
 In some cases you may want to design whole sharer view controller from stratch. To do this your sharer view controller should extend ScreenshotSharerViewController class and you should register it to ScreenshotSharer instance.
