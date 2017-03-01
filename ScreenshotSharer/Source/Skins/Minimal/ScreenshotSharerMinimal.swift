@@ -62,6 +62,7 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
     }
     
     
+    
     override open func setShareTitleFont(font: UIFont)
     {
         super.setShareTitleFont(font: font)
@@ -81,6 +82,25 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
     }
     
     
+    override open func setShareTitleTextColor(color: UIColor) 
+    {
+        super.setShareTitleTextColor(color: color)
+        self.titleLabel.textColor = color
+    }
+    
+    override open func setShareDescriptionTextColor(color: UIColor)
+    {
+        super.setShareDescriptionTextColor(color: color)
+        self.descriptionLabel.textColor = color
+    }
+    
+    override open func setShareButtonTitleColor(color: UIColor)
+    {
+        super.setShareButtonTitleColor(color: color)
+        self.shareButton.setTitleColor(color, for: .normal)
+    }
+    
+    
     @IBAction func shareButtonAction(_ sender: Any)
     {
         let activityItem: [AnyObject] = [self.screenshotImageView.image as AnyObject]
@@ -90,12 +110,18 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
         activityViewController.completionWithItemsHandler = {
             (s, ok, items, error) in
             
-            ScreenshotSharer.shared.dismissSharerViewController()
+            if let screenshotSharer = self.screenshotSharer
+            {
+                screenshotSharer.dismissSharerViewController()
+            }
         }
     }
     
     @IBAction func dismissButtonAction(_ sender: Any)
     {
-        ScreenshotSharer.shared.dismissSharerViewController()
+        if let screenshotSharer = self.screenshotSharer
+        {
+            screenshotSharer.dismissSharerViewController()
+        }
     }
 }

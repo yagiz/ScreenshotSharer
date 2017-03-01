@@ -10,11 +10,6 @@ import UIKit
 
 open class ScreenshotSharer: NSObject
 {
-    open static let shared : ScreenshotSharer = {
-        let instance = ScreenshotSharer()
-        return instance
-    }()
-    
     open var sharerViewController:ScreenshotSharerViewController?
     open weak var sender:UIViewController?
     
@@ -87,6 +82,7 @@ open class ScreenshotSharer: NSObject
             let croppedImage = self.crop(image: image, rect: self.cropRect)
             
             sender.present(sharerViewController, animated: false, completion: nil)
+            sharerViewController.screenshotSharer = self
             sharerViewController.setScreenshotImage(image: croppedImage)
             
             self.captureBlock(croppedImage,self.sharerViewController)
@@ -113,6 +109,7 @@ open class ScreenshotSharer: NSObject
             
             
             sender.present(sharerViewController, animated: false, completion: nil)
+            sharerViewController.screenshotSharer = self
             sharerViewController.setScreenshotImage(image: croppedImage)
             
             self.captureBlock(croppedImage,self.sharerViewController)

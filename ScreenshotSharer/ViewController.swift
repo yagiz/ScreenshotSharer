@@ -10,21 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    let sssharer = ScreenshotSharer()
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
         
-        
-        ScreenshotSharer.shared.registerViewCapturer(view: self.view, cropRect: CGRect.zero, sender: self) { (image, sharerViewController) in
+        sssharer.registerViewCapturer(view: self.view, cropRect: CGRect.zero, sender: self) { (image, sharerViewController) in
             
+            
+            //this block is called when the user took a screenshot
+            //image is image of given view and it may be cropped according to cropRect.
+            //sharerViewController is the presented view controller
             
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        sssharer.unregister()
     }
-
-
 }
 

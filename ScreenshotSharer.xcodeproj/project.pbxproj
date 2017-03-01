@@ -14,13 +14,13 @@
 		BC2D359A1E671C9C0027CEA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2D35981E671C9C0027CEA9 /* LaunchScreen.storyboard */; };
 		BC2D35A51E671C9C0027CEA9 /* ScreenshotSharerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2D35A41E671C9C0027CEA9 /* ScreenshotSharerTests.swift */; };
 		BC2D35B01E671C9C0027CEA9 /* ScreenshotSharerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2D35AF1E671C9C0027CEA9 /* ScreenshotSharerUITests.swift */; };
-		BC2D35C81E671CC60027CEA9 /* ScreenshotSharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2D35BE1E671CC60027CEA9 /* ScreenshotSharer.swift */; };
-		BC2D35C91E671CC60027CEA9 /* ScreenshotSharerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2D35BF1E671CC60027CEA9 /* ScreenshotSharerViewController.swift */; };
-		BC2D35CA1E671CC60027CEA9 /* ic_dismiss.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2D35C31E671CC60027CEA9 /* ic_dismiss.png */; };
-		BC2D35CB1E671CC60027CEA9 /* ic_dismiss@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2D35C41E671CC60027CEA9 /* ic_dismiss@2x.png */; };
-		BC2D35CC1E671CC60027CEA9 /* ic_dismiss@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2D35C51E671CC60027CEA9 /* ic_dismiss@3x.png */; };
-		BC2D35CD1E671CC60027CEA9 /* ScreenshotSharerMinimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2D35C61E671CC60027CEA9 /* ScreenshotSharerMinimal.swift */; };
-		BC2D35CE1E671CC60027CEA9 /* ScreenshotSharerMinimal.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC2D35C71E671CC60027CEA9 /* ScreenshotSharerMinimal.xib */; };
+		BCCD2E321E673C2E00B52C04 /* ScreenshotSharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD2E281E673C2E00B52C04 /* ScreenshotSharer.swift */; };
+		BCCD2E331E673C2E00B52C04 /* ScreenshotSharerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD2E291E673C2E00B52C04 /* ScreenshotSharerViewController.swift */; };
+		BCCD2E341E673C2E00B52C04 /* ic_dismiss.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCD2E2D1E673C2E00B52C04 /* ic_dismiss.png */; };
+		BCCD2E351E673C2E00B52C04 /* ic_dismiss@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCD2E2E1E673C2E00B52C04 /* ic_dismiss@2x.png */; };
+		BCCD2E361E673C2E00B52C04 /* ic_dismiss@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCD2E2F1E673C2E00B52C04 /* ic_dismiss@3x.png */; };
+		BCCD2E371E673C2E00B52C04 /* ScreenshotSharerMinimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD2E301E673C2E00B52C04 /* ScreenshotSharerMinimal.swift */; };
+		BCCD2E381E673C2E00B52C04 /* ScreenshotSharerMinimal.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCD2E311E673C2E00B52C04 /* ScreenshotSharerMinimal.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,13 +54,13 @@
 		BC2D35AB1E671C9C0027CEA9 /* ScreenshotSharerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenshotSharerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2D35AF1E671C9C0027CEA9 /* ScreenshotSharerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerUITests.swift; sourceTree = "<group>"; };
 		BC2D35B11E671C9C0027CEA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC2D35BE1E671CC60027CEA9 /* ScreenshotSharer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharer.swift; sourceTree = "<group>"; };
-		BC2D35BF1E671CC60027CEA9 /* ScreenshotSharerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerViewController.swift; sourceTree = "<group>"; };
-		BC2D35C31E671CC60027CEA9 /* ic_dismiss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_dismiss.png; sourceTree = "<group>"; };
-		BC2D35C41E671CC60027CEA9 /* ic_dismiss@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dismiss@2x.png"; sourceTree = "<group>"; };
-		BC2D35C51E671CC60027CEA9 /* ic_dismiss@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dismiss@3x.png"; sourceTree = "<group>"; };
-		BC2D35C61E671CC60027CEA9 /* ScreenshotSharerMinimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerMinimal.swift; sourceTree = "<group>"; };
-		BC2D35C71E671CC60027CEA9 /* ScreenshotSharerMinimal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScreenshotSharerMinimal.xib; sourceTree = "<group>"; };
+		BCCD2E281E673C2E00B52C04 /* ScreenshotSharer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharer.swift; sourceTree = "<group>"; };
+		BCCD2E291E673C2E00B52C04 /* ScreenshotSharerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerViewController.swift; sourceTree = "<group>"; };
+		BCCD2E2D1E673C2E00B52C04 /* ic_dismiss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_dismiss.png; sourceTree = "<group>"; };
+		BCCD2E2E1E673C2E00B52C04 /* ic_dismiss@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dismiss@2x.png"; sourceTree = "<group>"; };
+		BCCD2E2F1E673C2E00B52C04 /* ic_dismiss@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dismiss@3x.png"; sourceTree = "<group>"; };
+		BCCD2E301E673C2E00B52C04 /* ScreenshotSharerMinimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerMinimal.swift; sourceTree = "<group>"; };
+		BCCD2E311E673C2E00B52C04 /* ScreenshotSharerMinimal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScreenshotSharerMinimal.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 		BC2D358E1E671C9C0027CEA9 /* ScreenshotSharer */ = {
 			isa = PBXGroup;
 			children = (
-				BC2D35BD1E671CC60027CEA9 /* Classes */,
+				BCCD2E271E673C2E00B52C04 /* Source */,
 				BC2D358F1E671C9C0027CEA9 /* AppDelegate.swift */,
 				BC2D35911E671C9C0027CEA9 /* ViewController.swift */,
 				BC2D35931E671C9C0027CEA9 /* Main.storyboard */,
@@ -140,40 +140,40 @@
 			path = ScreenshotSharerUITests;
 			sourceTree = "<group>";
 		};
-		BC2D35BD1E671CC60027CEA9 /* Classes */ = {
+		BCCD2E271E673C2E00B52C04 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				BC2D35BE1E671CC60027CEA9 /* ScreenshotSharer.swift */,
-				BC2D35BF1E671CC60027CEA9 /* ScreenshotSharerViewController.swift */,
-				BC2D35C01E671CC60027CEA9 /* Skins */,
+				BCCD2E281E673C2E00B52C04 /* ScreenshotSharer.swift */,
+				BCCD2E291E673C2E00B52C04 /* ScreenshotSharerViewController.swift */,
+				BCCD2E2A1E673C2E00B52C04 /* Skins */,
 			);
-			path = Classes;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		BC2D35C01E671CC60027CEA9 /* Skins */ = {
+		BCCD2E2A1E673C2E00B52C04 /* Skins */ = {
 			isa = PBXGroup;
 			children = (
-				BC2D35C11E671CC60027CEA9 /* Minimal */,
+				BCCD2E2B1E673C2E00B52C04 /* Minimal */,
 			);
 			path = Skins;
 			sourceTree = "<group>";
 		};
-		BC2D35C11E671CC60027CEA9 /* Minimal */ = {
+		BCCD2E2B1E673C2E00B52C04 /* Minimal */ = {
 			isa = PBXGroup;
 			children = (
-				BC2D35C21E671CC60027CEA9 /* Assets */,
-				BC2D35C61E671CC60027CEA9 /* ScreenshotSharerMinimal.swift */,
-				BC2D35C71E671CC60027CEA9 /* ScreenshotSharerMinimal.xib */,
+				BCCD2E2C1E673C2E00B52C04 /* Assets */,
+				BCCD2E301E673C2E00B52C04 /* ScreenshotSharerMinimal.swift */,
+				BCCD2E311E673C2E00B52C04 /* ScreenshotSharerMinimal.xib */,
 			);
 			path = Minimal;
 			sourceTree = "<group>";
 		};
-		BC2D35C21E671CC60027CEA9 /* Assets */ = {
+		BCCD2E2C1E673C2E00B52C04 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				BC2D35C31E671CC60027CEA9 /* ic_dismiss.png */,
-				BC2D35C41E671CC60027CEA9 /* ic_dismiss@2x.png */,
-				BC2D35C51E671CC60027CEA9 /* ic_dismiss@3x.png */,
+				BCCD2E2D1E673C2E00B52C04 /* ic_dismiss.png */,
+				BCCD2E2E1E673C2E00B52C04 /* ic_dismiss@2x.png */,
+				BCCD2E2F1E673C2E00B52C04 /* ic_dismiss@3x.png */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -288,12 +288,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC2D35CB1E671CC60027CEA9 /* ic_dismiss@2x.png in Resources */,
-				BC2D35CE1E671CC60027CEA9 /* ScreenshotSharerMinimal.xib in Resources */,
-				BC2D35CA1E671CC60027CEA9 /* ic_dismiss.png in Resources */,
+				BCCD2E351E673C2E00B52C04 /* ic_dismiss@2x.png in Resources */,
+				BCCD2E381E673C2E00B52C04 /* ScreenshotSharerMinimal.xib in Resources */,
+				BCCD2E341E673C2E00B52C04 /* ic_dismiss.png in Resources */,
 				BC2D359A1E671C9C0027CEA9 /* LaunchScreen.storyboard in Resources */,
 				BC2D35971E671C9C0027CEA9 /* Assets.xcassets in Resources */,
-				BC2D35CC1E671CC60027CEA9 /* ic_dismiss@3x.png in Resources */,
+				BCCD2E361E673C2E00B52C04 /* ic_dismiss@3x.png in Resources */,
 				BC2D35951E671C9C0027CEA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,9 +320,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC2D35921E671C9C0027CEA9 /* ViewController.swift in Sources */,
-				BC2D35C91E671CC60027CEA9 /* ScreenshotSharerViewController.swift in Sources */,
-				BC2D35C81E671CC60027CEA9 /* ScreenshotSharer.swift in Sources */,
-				BC2D35CD1E671CC60027CEA9 /* ScreenshotSharerMinimal.swift in Sources */,
+				BCCD2E331E673C2E00B52C04 /* ScreenshotSharerViewController.swift in Sources */,
+				BCCD2E321E673C2E00B52C04 /* ScreenshotSharer.swift in Sources */,
+				BCCD2E371E673C2E00B52C04 /* ScreenshotSharerMinimal.swift in Sources */,
 				BC2D35901E671C9C0027CEA9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,6 +576,7 @@
 				BC2D35B61E671C9C0027CEA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC2D35B71E671C9C0027CEA9 /* Build configuration list for PBXNativeTarget "ScreenshotSharerTests" */ = {
 			isa = XCConfigurationList;
@@ -584,6 +585,7 @@
 				BC2D35B91E671C9C0027CEA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC2D35BA1E671C9C0027CEA9 /* Build configuration list for PBXNativeTarget "ScreenshotSharerUITests" */ = {
 			isa = XCConfigurationList;
@@ -592,6 +594,7 @@
 				BC2D35BC1E671C9C0027CEA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

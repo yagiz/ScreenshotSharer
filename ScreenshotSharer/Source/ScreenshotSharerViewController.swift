@@ -19,52 +19,64 @@ public protocol ScreenshotSharerViewControllerProtocol
     func setShareTitleFont(font:UIFont)
     func setShareDescriptionFont(font:UIFont)
     func setShareButtonTitleFont(font:UIFont)
+    
+    func setShareTitleTextColor(color:UIColor)
+    func setShareDescriptionTextColor(color:UIColor)
+    func setShareButtonTitleColor(color:UIColor)
 }
 
 open class ScreenshotSharerViewController: UIViewController, ScreenshotSharerViewControllerProtocol
 {
-    var screenshotImage:UIImage!
-    var shareTitle:String!
-    var shareDescription:String!
-    var shareButtonTitle:String!
     
-    var shareTitleFont:UIFont!
-    var shareDescriptionFont:UIFont!
-    var shareButtonTitleFont:UIFont!
+    open weak var screenshotSharer:ScreenshotSharer?
     
     open func setScreenshotImage(image:UIImage)
     {
-        self.screenshotImage = image
     }
+    
+    
     
     open func setShareTitle(title:String)
     {
-        self.shareTitle = title
     }
 
     open func setShareDescription(description:String)
     {
-        self.shareDescription = description
     }
     
     open func setShareButtonTitle(title:String)
     {
-        self.shareButtonTitle = title
     }
+    
+    
     
     open func setShareTitleFont(font:UIFont)
     {
-        self.shareTitleFont = font
     }
     
     open func setShareDescriptionFont(font:UIFont)
     {
-        self.shareDescriptionFont = font
     }
     
     open func setShareButtonTitleFont(font:UIFont)
     {
-        self.shareButtonTitleFont = font
+    }
+    
+    
+    
+    open func setShareTitleTextColor(color:UIColor)
+    {
+        
+    }
+    
+    open func setShareDescriptionTextColor(color:UIColor)
+    {
+        
+    }
+    
+    open func setShareButtonTitleColor(color:UIColor)
+    {
+        
     }
 }
 
