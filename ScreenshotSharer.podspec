@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'ScreenshotSharer'
   s.version          = '0.1.3'
-  s.summary          = 'SSSharer is a little Swift 3.0 pod that enables users to share screenshot image quickly.'
+  s.summary          = 'ScreenshotSharer is a little Swift 3.0 pod that enables users to share screenshot image quickly.'
  
   s.description      = <<-DESC
-SSSharer is a little Swift 3.0 pod that enables users to share screenshot image quickly. It's inspired from Asos app. It's highly customizable. You can even design your own ViewController(XIB,Storyboard or pure by code) and use it as a sharer view.
+ScreenshotSharer is a little Swift 3.0 pod that enables users to share a spesific part of view or whole screen when they took a screenshot. It's heavly inspired from Asos app and highly customizable.
                        DESC
  
   s.homepage         = 'https://github.com/yagiz/ScreenshotSharer'
@@ -13,6 +13,6 @@ SSSharer is a little Swift 3.0 pod that enables users to share screenshot image 
   s.source           = { :git => 'https://github.com/yagiz/ScreenshotSharer.git', :tag => s.version.to_s }
  
   s.ios.deployment_target = '8.0'
-  s.source_files = 'ScreenshotSharer/Classes/**/*.{swift,xib,png}'
+  s.source_files = 'ScreenshotSharer/Source/**/*.{swift,xib,png}'
  
 end
