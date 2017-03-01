@@ -1,46 +1,102 @@
-# ScrollTo
-ScrollTo is a little UIScrollView and UIView extension that enables to scroll through the scroll view until the given view is at a particular location on the screen. It doesn't matter if given view is in a complicated hiearchy. ScrollTo calculates the position of the view according to scroll view coordinate. It basically mimicks the behaviour of the ```scrollToRow(at:at:animated:)``` method of UITableView.
+# ScreenshotSharer
+ScreenshotSharer is a little Swift 3.0 pod that enables users to share a spesific part of view or whole screen when they took a screenshot. It's heavly inspired from Asos app and highly customizable. 
 
 ### Installation
 
 #### CocoaPods
 ```sh
-pod 'ScrollTo', '~> 0.1.2'
+pod 'ScreenshotSharer'
 ```
 #### Manually
-Just download or clone the repo and move ScrollTo.swift file to your project.
+Just download or clone the repo and move Source folder to your project.
 
 ### Usage
-You can call ```scrollTo``` method from classes that are subclasses of UIScrollView. There is no control if given view is actually contained by scroll view. Be sure that it's indeed contained by scroll view.
-#### UIScrollView (UITableView, UICollectionView)
+You can init a new ScreeshotSharer instance to register a view or window to be captured. 
+
+#### Capturing a View
 ```swift
-scrollView.scrollTo(view:UIView, position:ScrollToPosition)
-scrollView.scrollTo(view:UIView, position:ScrollToPosition, margin:CGFloat)
-scrollView.scrollTo(view:UIView, position:ScrollToPosition, margin:CGFloat,animated:Bool)
+import UIKit
+import ScreenshotSharer
+
+class ViewController: UIViewController {
+
+    let sssharer = ScreenshotSharer()
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        //register a view and set sender as presenter
+        sssharer.registerViewCapturer(view: self.view, cropRect: CGRect.zero, sender: self) { (image, sharerViewController) in
+            
+            
+            //this block is called when the user took a screenshot
+            //image is the image of given view. It may be cropped according to given cropRect.
+            //sharerViewController is the presented view controller
+            
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        //If you want to enable ScreenshotSharer in spesific views, you should don't forget to unregister it when view is disappeared.
+        sssharer.unregister()
+    }
+}
+
 ```
 
-#### UIView 
-You don't need to store reference of the scroll view. ScrollTo finds the first scroll view that contains the view. This is very useful for custom cells and textfields.
+#### Capturing Whole Screen
 ```swift
-view.scrollTo(position:ScrollToPosition)
-view.scrollTo(position:ScrollToPosition, margin:CGFloat)
-view.scrollTo(position:ScrollToPosition, margin:CGFloat,animated:Bool)
-```
-For example, if you want to center the text fields of a form when they do begin editing, you can write something like this:
-```swift
-func textFieldDidBeginEditing(_ textField: UITextField)
-{
-    textField.scrollTo(position: .middle)
-}
-```
-If you want to use custom animation, you can call scrollTo method in animation block with animated argument is false:
-```swift
-UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
-    self.scrollView.scrollTo(view: view, position: .middle, margin: 0, animated: false)
-}) { (Bool) in
+sssharer.registerScreenCapturer(cropStatusBar: true, cropRect: CGRect.zero, sender: self) { (image, sharerViewController) in
             
-}
+            //this block is called when the user took a screenshot
+            //image is the image of given view. It may be cropped according to given cropRect.
+            //sharerViewController is the presented view controller
+            
+        }
 ```
+
+#### Customizing Default Sharer View Controller 
+By default ScreenshotSharer uses ScreenshotSharerMinimal as presented sharer view controller. You can customize it in the captureBlock:
+```swift
+sssharer.registerViewCapturer(view: self.view, cropRect: CGRect.zero, sender: self) { (image, sharerViewController) in
+            
+            if let sharerViewController = sharerViewController
+            {
+                sharerViewController.view.backgroundColor = UIColor.red
+                sharerViewController.setShareTitle(title: String)
+                sharerViewController.setShareTitleFont(font: UIFont)
+                sharerViewController.setShareTitleColor(color: UIColor)
+                
+            }
+        }
+```
+These are the whole methods you can use to customize default sharer view controller.
+```swift
+    func setScreenshotImage(image:UIImage)
+
+    func setShareTitle(title:String)
+    func setShareDescription(description:String)
+    func setShareButtonTitle(title:String)
+    
+    func setShareTitleFont(font:UIFont)
+    func setShareDescriptionFont(font:UIFont)
+    func setShareButtonTitleFont(font:UIFont)
+```
+#### Designing Your Own Sharer View Controller
+In some cases you may want to design whole sharer view controller from stratch. To do this your sharer view controller should extend ScreenshotSharerViewController class and you should register it to ScreenshotSharer instance.
+```swift
+let customSharerVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CustomScreenShotSharerViewController") as! CustomScreenShotSharerViewController
+        
+        sssharer.registerViewCapturer(view: self.view, cropRect: CGRect.zero, sharerViewController: customSharerVC, sender: self) { (image, sharerViewController) in
+            
+            
+        }
+```
+You can copy the ScreenshotSharerMinimal.swift and ScreenshotSharerMinimal.xib files as your base design.
 
 License
 ----
