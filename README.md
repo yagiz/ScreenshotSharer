@@ -52,11 +52,11 @@ class ViewController: UIViewController {
 ```swift
 sssharer.registerScreenCapturer(cropStatusBar: true, cropRect: CGRect.zero, sender: self) { (image, sharerViewController) in
             
-            //this block is called when the user took a screenshot
-            //image is the image of given view. It may be cropped according to given cropRect.
-            //sharerViewController is the presented view controller
-            
-        }
+    //this block is called when the user took a screenshot
+    //image is the image of given view. It may be cropped according to given cropRect.
+    //sharerViewController is the presented view controller
+    
+}
 ```
 
 #### Customizing Default Sharer View Controller 
@@ -64,15 +64,14 @@ By default ScreenshotSharer uses ScreenshotSharerMinimal as presented sharer vie
 ```swift
 sssharer.registerViewCapturer(view: self.view, cropRect: CGRect.zero, sender: self) { (image, sharerViewController) in
             
-            if let sharerViewController = sharerViewController
-            {
-                sharerViewController.view.backgroundColor = UIColor.red
-                sharerViewController.setShareTitle(title: String)
-                sharerViewController.setShareTitleFont(font: UIFont)
-                sharerViewController.setShareTitleColor(color: UIColor)
-                
-            }
-        }
+    if let sharerViewController = sharerViewController
+    {
+        sharerViewController.view.backgroundColor = UIColor.red
+        sharerViewController.setShareTitle(title: String)
+        sharerViewController.setShareTitleFont(font: UIFont)
+        sharerViewController.setShareTitleColor(color: UIColor)
+    }
+}
 ```
 These are the whole methods you can use to customize default sharer view controller.
 ```swift
@@ -91,10 +90,9 @@ In some cases you may want to design whole sharer view controller from stratch. 
 ```swift
 let customSharerVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CustomScreenShotSharerViewController") as! CustomScreenShotSharerViewController
         
-        sssharer.registerViewCapturer(view: self.view, cropRect: CGRect.zero, sharerViewController: customSharerVC, sender: self) { (image, sharerViewController) in
+sssharer.registerViewCapturer(view: self.view, cropRect: CGRect.zero, sharerViewController: customSharerVC, sender: self) { (image, sharerViewController) in
             
-            
-        }
+}
 ```
 You can copy the ScreenshotSharerMinimal.swift and ScreenshotSharerMinimal.xib files as your base design.
 
