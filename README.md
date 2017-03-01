@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     {
         super.viewWillAppear(animated)
         
-        //If you want to enable ScreenshotSharer in spesific views, you should don't forget to unregister it when view is disappeared.
+        //If you want to enable ScreenshotSharer in spesific views only, you shouldn't forget to unregister it when view is disappeared.
         sssharer.unregister()
     }
 }
