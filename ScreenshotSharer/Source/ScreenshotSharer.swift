@@ -56,7 +56,7 @@ open class ScreenshotSharer: NSObject
     
     open func registerViewCapturer(view:UIView, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController) -> ()))
     {
-        if self.sharerViewController == nil
+        if self.sharerViewController != nil
         {
             return
         }
@@ -70,7 +70,7 @@ open class ScreenshotSharer: NSObject
     
     open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController) -> ()))
     {
-        if self.sharerViewController == nil
+        if self.sharerViewController != nil
         {
             return
         }
