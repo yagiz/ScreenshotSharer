@@ -26,7 +26,7 @@ import UIKit
 
 open class ScreenshotSharer: NSObject
 {
-    open var sharerViewController:ScreenshotSharerViewController!
+    open var sharerViewController:ScreenshotSharerViewController?
     open weak var sender:UIViewController?
     
     open weak var capturedView:UIView?
@@ -35,8 +35,9 @@ open class ScreenshotSharer: NSObject
     
     open var captureBlock:((UIImage?,ScreenshotSharerViewController) -> ())?
     
-    open var isEnabled:Bool = true
+    open var isEnabled:Bool = false
     open var isSharerPresented:Bool = false
+    open var isRegistered:Bool = false
     
     override public init()
     {
@@ -44,19 +45,19 @@ open class ScreenshotSharer: NSObject
         NotificationCenter.default.addObserver(self, selector: #selector(self.applicationUserDidTakeScreenshot(notification:)), name: NSNotification.Name.UIApplicationUserDidTakeScreenshot, object: nil)
     }
     
-    open func registerViewCapturer(view:UIView, cropRect:CGRect, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController) -> ()))
+    open func registerViewCapturer(view:UIView, cropRect:CGRect, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()))
     {
         self.registerViewCapturer(view: view, cropRect: cropRect, sharerViewController: ScreenshotSharerMinimal(nibName: "ScreenshotSharerMinimal", bundle: Bundle(for: ScreenshotSharerMinimal.self)), sender: sender, captureBlock: captureBlock)
     }
     
-    open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController) -> ()))
+    open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()))
     {
         self.registerScreenCapturer(cropStatusBar: cropStatusBar, cropRect: cropRect, sharerViewController: ScreenshotSharerMinimal(nibName: "ScreenshotSharerMinimal", bundle: Bundle(for: ScreenshotSharerMinimal.self)), sender: sender, captureBlock: captureBlock)
     }
     
-    open func registerViewCapturer(view:UIView, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController) -> ()))
+    open func registerViewCapturer(view:UIView, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()))
     {
-        if self.sharerViewController != nil
+        if self.isRegistered == true
         {
             return
         }
@@ -66,11 +67,14 @@ open class ScreenshotSharer: NSObject
         self.sharerViewController = sharerViewController
         self.sender = sender
         self.captureBlock = captureBlock
+        
+        self.isRegistered = true
+        self.isEnabled = true
     }
     
-    open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController) -> ()))
+    open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()))
     {
-        if self.sharerViewController != nil
+        if self.isRegistered == true
         {
             return
         }
@@ -82,6 +86,9 @@ open class ScreenshotSharer: NSObject
         self.captureBlock = captureBlock
         
         self.capturedView = nil
+        
+        self.isRegistered = true
+        self.isEnabled = true
     }
     
     open func unregister()
@@ -91,13 +98,16 @@ open class ScreenshotSharer: NSObject
         self.sender = nil
         self.captureBlock = nil
         self.capturedView = nil
+        
+        self.isEnabled = false
+        self.isRegistered = false
     }
     
     
     func applicationUserDidTakeScreenshot(notification:NSNotification)
     {
         
-        if self.isEnabled == false || self.isSharerPresented == true
+        if self.isEnabled == false || self.isSharerPresented == true || self.isRegistered == false
         {
             return
         }
