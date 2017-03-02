@@ -33,7 +33,7 @@ open class ScreenshotSharer: NSObject
     open var isCropStatusBar:Bool = false
     open var cropRect:CGRect!
     
-    open var captureBlock:((UIImage?,ScreenshotSharerViewController) -> ())?
+    open var captureBlock:((UIImage?,ScreenshotSharerViewController?) -> ())?
     
     open var isEnabled:Bool = false
     open var isSharerPresented:Bool = false
@@ -156,7 +156,7 @@ open class ScreenshotSharer: NSObject
             return
         }
         
-        self.captureBlock?(nil,self.sharerViewController)
+        self.captureBlock?(nil,nil)
     }
     
     open func takeImageOf(view:UIView) -> UIImage
