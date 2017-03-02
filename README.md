@@ -22,30 +22,34 @@ class ViewController: UIViewController {
 
     let sssharer = ScreenshotSharer()
     
-    override func viewWillAppear(_ animated: Bool)
+    override func viewDidLoad()
     {
-        super.viewWillAppear(animated)
+        super.viewDidLoad()
         
-        //register a view and set sender as presenter
         sssharer.registerViewCapturer(view: self.view, cropRect: CGRect.zero, sender: self) { (image, sharerViewController) in
             
             
             //this block is called when the user took a screenshot
-            //image is the image of given view. It may be cropped according to given cropRect.
+            //image is image of given view and it may be cropped according to cropRect.
             //sharerViewController is the presented view controller
             
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        sssharer.isEnabled = true
     }
     
     override func viewWillDisappear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
         
-        //If you want to enable ScreenshotSharer in spesific views, you should don't forget to unregister it when view is disappeared.
-        sssharer.unregister()
+        sssharer.isEnabled = false
     }
 }
-
 ```
 
 #### Capturing Whole Screen
@@ -97,7 +101,15 @@ sssharer.registerViewCapturer(view: self.view, cropRect: CGRect.zero, sharerView
             
 }
 ```
-You can copy the ScreenshotSharerMinimal.swift and ScreenshotSharerMinimal.xib files as your base design.
+You can copy the ScreenshotSharerMinimal.swift and ScreenshotSharerMinimal.xib files as your base design. ScreenshotSharer will present your own view controller and call this method:
+```swift
+func setScreenshotImage(image:UIImage)
+```
+When you want to dismiss the sharer view controller you should call this method:
+```swift
+self.screenshotSharer.dismissSharerViewController()
+```
+
 
 License
 ----

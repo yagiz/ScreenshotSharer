@@ -7,14 +7,15 @@
 //
 
 import UIKit
+//import ScreenshotSharer
 
 class ViewController: UIViewController {
 
     let sssharer = ScreenshotSharer()
     
-    override func viewWillAppear(_ animated: Bool)
+    override func viewDidLoad()
     {
-        super.viewWillAppear(animated)
+        super.viewDidLoad()
         
         sssharer.registerViewCapturer(view: self.view, cropRect: CGRect.zero, sender: self) { (image, sharerViewController) in
             
@@ -26,11 +27,18 @@ class ViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        sssharer.isEnabled = true
+    }
+    
     override func viewWillDisappear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
         
-        sssharer.unregister()
+        sssharer.isEnabled = false
     }
 }
 

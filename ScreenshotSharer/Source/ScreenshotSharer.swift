@@ -1,24 +1,42 @@
-//
-//  ScreenshotCapturer.swift
-//  ScreenshotCapturer
-//
-//  Created by Yagiz Gurgul on 27/02/2017.
-//  Copyright © 2017 Yagiz Gurgul. All rights reserved.
-//
+/*
+ MIT License
+ 
+ Copyright (c) 2017 Yagiz Gurgul
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+ */
 
 import UIKit
 
 open class ScreenshotSharer: NSObject
 {
-    open var sharerViewController:ScreenshotSharerViewController?
+    open var sharerViewController:ScreenshotSharerViewController!
     open weak var sender:UIViewController?
     
     open weak var capturedView:UIView?
     open var isCropStatusBar:Bool = false
     open var cropRect:CGRect!
     
-    open var captureBlock:((UIImage?,ScreenshotSharerViewController?) -> ())!
+    open var captureBlock:((UIImage?,ScreenshotSharerViewController) -> ())?
+    
     open var isEnabled:Bool = true
+    open var isSharerPresented:Bool = false
     
     override public init()
     {
@@ -26,18 +44,23 @@ open class ScreenshotSharer: NSObject
         NotificationCenter.default.addObserver(self, selector: #selector(self.applicationUserDidTakeScreenshot(notification:)), name: NSNotification.Name.UIApplicationUserDidTakeScreenshot, object: nil)
     }
     
-    open func registerViewCapturer(view:UIView, cropRect:CGRect, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()))
+    open func registerViewCapturer(view:UIView, cropRect:CGRect, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController) -> ()))
     {
         self.registerViewCapturer(view: view, cropRect: cropRect, sharerViewController: ScreenshotSharerMinimal(nibName: "ScreenshotSharerMinimal", bundle: Bundle(for: ScreenshotSharerMinimal.self)), sender: sender, captureBlock: captureBlock)
     }
     
-    open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()))
+    open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController) -> ()))
     {
         self.registerScreenCapturer(cropStatusBar: cropStatusBar, cropRect: cropRect, sharerViewController: ScreenshotSharerMinimal(nibName: "ScreenshotSharerMinimal", bundle: Bundle(for: ScreenshotSharerMinimal.self)), sender: sender, captureBlock: captureBlock)
     }
     
-    open func registerViewCapturer(view:UIView, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()))
+    open func registerViewCapturer(view:UIView, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController) -> ()))
     {
+        if self.sharerViewController == nil
+        {
+            return
+        }
+        
         self.capturedView = view
         self.cropRect = cropRect
         self.sharerViewController = sharerViewController
@@ -45,8 +68,13 @@ open class ScreenshotSharer: NSObject
         self.captureBlock = captureBlock
     }
     
-    open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()))
+    open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, sender:UIViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController) -> ()))
     {
+        if self.sharerViewController == nil
+        {
+            return
+        }
+        
         self.isCropStatusBar = cropStatusBar
         self.cropRect = cropRect
         self.sharerViewController = sharerViewController
@@ -69,14 +97,13 @@ open class ScreenshotSharer: NSObject
     func applicationUserDidTakeScreenshot(notification:NSNotification)
     {
         
-        if self.isEnabled == false
+        if self.isEnabled == false || self.isSharerPresented == true
         {
             return
         }
         
         if let view = capturedView, let sender = self.sender, let sharerViewController = sharerViewController
         {
-            self.isEnabled = false
             
             let image = self.takeImageOf(view: view)
             let croppedImage = self.crop(image: image, rect: self.cropRect)
@@ -85,13 +112,14 @@ open class ScreenshotSharer: NSObject
             sharerViewController.screenshotSharer = self
             sharerViewController.setScreenshotImage(image: croppedImage)
             
-            self.captureBlock(croppedImage,sharerViewController)
+            self.isSharerPresented = true
+            
+            self.captureBlock?(croppedImage,sharerViewController)
             
             return
             
         }else if let window = UIApplication.shared.windows.first, let sender = self.sender, let sharerViewController = sharerViewController
         {
-            self.isEnabled = false
             
             let image = self.takeImageOf(view: window)
             
@@ -111,12 +139,14 @@ open class ScreenshotSharer: NSObject
             sharerViewController.screenshotSharer = self
             sharerViewController.setScreenshotImage(image: croppedImage)
             
-            self.captureBlock(croppedImage,sharerViewController)
+            self.isSharerPresented = true
+            
+            self.captureBlock?(croppedImage,sharerViewController)
             
             return
         }
         
-        self.captureBlock(nil,nil)
+        self.captureBlock?(nil,self.sharerViewController)
     }
     
     open func takeImageOf(view:UIView) -> UIImage
@@ -159,7 +189,7 @@ open class ScreenshotSharer: NSObject
     {
         sharerViewController?.dismiss(animated: true, completion: {
             
-            self.isEnabled = true
+            self.isSharerPresented = false
             
         })
     }
