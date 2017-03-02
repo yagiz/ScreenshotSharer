@@ -108,7 +108,7 @@ You can copy the ScreenshotSharerMinimal.swift and ScreenshotSharerMinimal.xib f
 ```swift
 func setScreenshotImage(image:UIImage)
 ```
-When you want to dismiss the sharer view controller you should call this method:
+When you want to dismiss the sharer view controller you should call this method in your own sharer view controller:
 ```swift
 self.screenshotSharer.dismissSharerViewController()
 ```
