@@ -17,14 +17,6 @@ class ViewController: UIViewController {
     {
         super.viewDidLoad()
         
-        sssharer.registerViewCapturer(view: self.view, cropRect: CGRect.zero, sender: self) { (image, sharerViewController) in
-            
-            
-            //this block is called when the user took a screenshot
-            //image is image of given view and it may be cropped according to cropRect.
-            //sharerViewController is the presented view controller
-            
-        }
     }
     
     override func viewWillAppear(_ animated: Bool)

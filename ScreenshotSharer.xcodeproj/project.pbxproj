@@ -14,6 +14,7 @@
 		BC2D359A1E671C9C0027CEA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2D35981E671C9C0027CEA9 /* LaunchScreen.storyboard */; };
 		BC2D35A51E671C9C0027CEA9 /* ScreenshotSharerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2D35A41E671C9C0027CEA9 /* ScreenshotSharerTests.swift */; };
 		BC2D35B01E671C9C0027CEA9 /* ScreenshotSharerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2D35AF1E671C9C0027CEA9 /* ScreenshotSharerUITests.swift */; };
+		BC7908611E69730F00F178F5 /* ScreenshotSharerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7908601E69730F00F178F5 /* ScreenshotSharerUtility.swift */; };
 		BCCD2E321E673C2E00B52C04 /* ScreenshotSharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD2E281E673C2E00B52C04 /* ScreenshotSharer.swift */; };
 		BCCD2E331E673C2E00B52C04 /* ScreenshotSharerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD2E291E673C2E00B52C04 /* ScreenshotSharerViewController.swift */; };
 		BCCD2E341E673C2E00B52C04 /* ic_dismiss.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCD2E2D1E673C2E00B52C04 /* ic_dismiss.png */; };
@@ -54,6 +55,7 @@
 		BC2D35AB1E671C9C0027CEA9 /* ScreenshotSharerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenshotSharerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2D35AF1E671C9C0027CEA9 /* ScreenshotSharerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerUITests.swift; sourceTree = "<group>"; };
 		BC2D35B11E671C9C0027CEA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC7908601E69730F00F178F5 /* ScreenshotSharerUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerUtility.swift; sourceTree = "<group>"; };
 		BCCD2E281E673C2E00B52C04 /* ScreenshotSharer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharer.swift; sourceTree = "<group>"; };
 		BCCD2E291E673C2E00B52C04 /* ScreenshotSharerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerViewController.swift; sourceTree = "<group>"; };
 		BCCD2E2D1E673C2E00B52C04 /* ic_dismiss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_dismiss.png; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				BCCD2E281E673C2E00B52C04 /* ScreenshotSharer.swift */,
 				BCCD2E291E673C2E00B52C04 /* ScreenshotSharerViewController.swift */,
+				BC7908601E69730F00F178F5 /* ScreenshotSharerUtility.swift */,
 				BCCD2E2A1E673C2E00B52C04 /* Skins */,
 			);
 			path = Source;
@@ -322,6 +325,7 @@
 				BC2D35921E671C9C0027CEA9 /* ViewController.swift in Sources */,
 				BCCD2E331E673C2E00B52C04 /* ScreenshotSharerViewController.swift in Sources */,
 				BCCD2E321E673C2E00B52C04 /* ScreenshotSharer.swift in Sources */,
+				BC7908611E69730F00F178F5 /* ScreenshotSharerUtility.swift in Sources */,
 				BCCD2E371E673C2E00B52C04 /* ScreenshotSharerMinimal.swift in Sources */,
 				BC2D35901E671C9C0027CEA9 /* AppDelegate.swift in Sources */,
 			);
