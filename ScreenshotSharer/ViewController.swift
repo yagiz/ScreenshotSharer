@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     {
         super.viewDidLoad()
         
+        sssharer.registerScreenCapturer(cropStatusBar: true, cropRect: CGRect.zero) { (image, sharerViewController) in
+            
+        }
     }
     
     override func viewWillAppear(_ animated: Bool)

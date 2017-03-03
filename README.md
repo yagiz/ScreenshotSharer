@@ -57,8 +57,8 @@ class ViewController: UIViewController {
 
 #### Capturing Whole Screen
 ```swift
-sssharer.registerScreenCapturer(cropStatusBar: true, cropRect: CGRect.zero, sender: self) { (image, sharerViewController) in
-            
+sssharer.registerScreenCapturer(cropStatusBar: true, cropRect: CGRect.zero) { (image, sharerViewController) in
+
     //this block is called when the user took a screenshot
     //image is the image of given view. It may be cropped according to given cropRect.
     //sharerViewController is the presented view controller
