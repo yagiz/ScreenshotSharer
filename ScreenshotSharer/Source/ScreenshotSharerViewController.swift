@@ -42,7 +42,7 @@ public protocol ScreenshotSharerViewControllerProtocol
     func setShareButtonBackgroundColor(color:UIColor)
 }
 
-open class ScreenshotSharerViewController: UIViewController, ScreenshotSharerViewControllerProtocol
+@objc open class ScreenshotSharerViewController: UIViewController, ScreenshotSharerViewControllerProtocol
 {
     
     open weak var screenshotSharer:ScreenshotSharer?
