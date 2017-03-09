@@ -54,7 +54,7 @@ open class ScreenshotSharer: NSObject
         self.registerScreenCapturer(cropStatusBar: cropStatusBar, cropRect: cropRect, sharerViewController: ScreenshotSharerMinimal(nibName: "ScreenshotSharerMinimal", bundle: Bundle(for: ScreenshotSharerMinimal.self)), captureBlock: captureBlock)
     }
     
-    open func registerViewCapturer(view:UIView, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()))
+    open func registerViewCapturer<T: UIViewController>(view:UIView, cropRect:CGRect, sharerViewController:T?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ())) where T:ScreenshotSharerViewControllerProtocol
     {
         if self.isRegistered == true
         {
@@ -70,7 +70,7 @@ open class ScreenshotSharer: NSObject
         self.isEnabled = true
     }
     
-    open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()))
+    open func registerScreenCapturer<T: UIViewController>(cropStatusBar:Bool, cropRect:CGRect, sharerViewController:T?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ())) where T:ScreenshotSharerViewControllerProtocol
     {
         if self.isRegistered == true
         {
