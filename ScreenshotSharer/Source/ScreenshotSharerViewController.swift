@@ -24,6 +24,27 @@
 
 import UIKit
 
+@objc public protocol ScreenshotSharerViewControllerProtocol
+{
+    func screenshotSharer() -> ScreenshotSharer
+    func setScreenshotSharer(_ screenshotSharer:ScreenshotSharer)
+    
+    func setScreenshotImage(_ image:UIImage)
+    
+    func setShareTitleText(_ text:String)
+    func setShareDescriptionText(_ text:String)
+    func setShareButtonTitleText(_ text:String)
+    
+    func setShareTitleFont(_ font:UIFont)
+    func setShareDescriptionFont(_ font:UIFont)
+    func setShareButtonTitleFont(_ font:UIFont)
+    
+    func setShareTitleTextColor(_ color:UIColor)
+    func setShareDescriptionTextColor(_ color:UIColor)
+    func setShareButtonTitleColor(_ color:UIColor)
+    func setShareButtonBackgroundColor(_ color:UIColor)
+}
+
 @objc open class ScreenshotSharerViewController: UIViewController, ScreenshotSharerViewControllerProtocol
 {
     
