@@ -122,8 +122,7 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
     
     
     
-    
-    @IBAction func shareButtonAction(sender: Any)
+    @IBAction func shareButtonAction(_ sender: Any)
     {
         let activityItem: [AnyObject] = [self.screenshotImageView.image as AnyObject]
         let activityViewController = UIActivityViewController(activityItems: activityItem as [AnyObject], applicationActivities: nil)
@@ -136,7 +135,7 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
         }
     }
     
-    @IBAction func dismissButtonAction(sender: Any)
+    @IBAction func dismissButtonAction(_ sender: Any)
     {
         self.screenshotSharer().dismissSharerViewController()
     }
