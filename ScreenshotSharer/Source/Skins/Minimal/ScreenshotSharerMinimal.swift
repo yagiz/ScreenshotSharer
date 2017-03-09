@@ -38,7 +38,7 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
         super.viewDidLoad()
     }
     
-    override open func setScreenshotImage(image: UIImage)
+    override open func setScreenshotImage(_ image: UIImage)
     {
         self.screenshotImageView.image = image
         
@@ -59,70 +59,71 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
     
     
     
-    override open func setShareTitle(title: String)
+    
+    
+    override open func setShareTitleText(_ text:String)
     {
-        super.setShareTitle(title: title)
-        self.titleLabel.text = title
+        self.titleLabel.text = text
     }
     
-    override open func setShareDescription(description: String)
+    override open func setShareDescriptionText(_ text:String)
     {
-        super.setShareDescription(description: description)
-        self.descriptionLabel.text = description
+        self.descriptionLabel.text = text
     }
     
-    override open func setShareButtonTitle(title: String)
+    override open func setShareButtonTitleText(_ text:String)
     {
-        super.setShareButtonTitle(title: title)
-        self.shareButton.setTitle(title, for: .normal)
+        self.shareButton.setTitle(text, for: .normal)
     }
     
     
     
-    override open func setShareTitleFont(font: UIFont)
+    
+    
+    override open func setShareTitleFont(_ font: UIFont)
     {
-        super.setShareTitleFont(font: font)
         self.titleLabel.font = font
     }
     
-    override open func setShareDescriptionFont(font: UIFont)
+    override open func setShareDescriptionFont(_ font: UIFont)
     {
-        super.setShareDescriptionFont(font: font)
         self.descriptionLabel.font = font
     }
     
-    override open func setShareButtonTitleFont(font: UIFont)
+    override open func setShareButtonTitleFont(_ font: UIFont)
     {
-        super.setShareButtonTitleFont(font: font)
         self.shareButton.titleLabel?.font = font
     }
     
     
-    override open func setShareTitleTextColor(color: UIColor) 
+    
+    
+    
+    override open func setShareTitleTextColor(_ color: UIColor)
     {
-        super.setShareTitleTextColor(color: color)
         self.titleLabel.textColor = color
     }
     
-    override open func setShareDescriptionTextColor(color: UIColor)
+    override open func setShareDescriptionTextColor(_ color: UIColor)
     {
-        super.setShareDescriptionTextColor(color: color)
         self.descriptionLabel.textColor = color
     }
     
-    override open func setShareButtonTitleColor(color: UIColor)
+    override open func setShareButtonTitleColor(_ color: UIColor)
     {
-        super.setShareButtonTitleColor(color: color)
         self.shareButton.setTitleColor(color, for: .normal)
     }
     
-    override open func setShareButtonBackgroundColor(color: UIColor)
+    override open func setShareButtonBackgroundColor(_ color: UIColor)
     {
-        super.setShareButtonBackgroundColor(color: color)
         self.shareButton.backgroundColor = color
     }
     
-    @IBAction func shareButtonAction(_ sender: Any)
+    
+    
+    
+    
+    @IBAction func shareButtonAction(sender: Any)
     {
         let activityItem: [AnyObject] = [self.screenshotImageView.image as AnyObject]
         let activityViewController = UIActivityViewController(activityItems: activityItem as [AnyObject], applicationActivities: nil)
@@ -131,18 +132,12 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
         activityViewController.completionWithItemsHandler = {
             (s, ok, items, error) in
             
-            if let screenshotSharer = self.screenshotSharer
-            {
-                screenshotSharer.dismissSharerViewController()
-            }
+            self.screenshotSharer().dismissSharerViewController()
         }
     }
     
-    @IBAction func dismissButtonAction(_ sender: Any)
+    @IBAction func dismissButtonAction(sender: Any)
     {
-        if let screenshotSharer = self.screenshotSharer
-        {
-            screenshotSharer.dismissSharerViewController()
-        }
+        self.screenshotSharer().dismissSharerViewController()
     }
 }

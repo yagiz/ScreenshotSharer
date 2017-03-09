@@ -24,35 +24,23 @@
 
 import UIKit
 
-@objc open class ScreenshotSharerViewController: UIViewController, ScreenshotSharerViewControllerProtocol
+public protocol ScreenshotSharerViewControllerProtocol
 {
+    func screenshotSharer() -> ScreenshotSharer
+    func setScreenshotSharer(_ screenshotSharer:ScreenshotSharer)
     
-    open weak var screenshotSharerInstance:ScreenshotSharer?
+    func setScreenshotImage(_ image:UIImage)
     
-    open func screenshotSharer() -> ScreenshotSharer
-    {
-        return self.screenshotSharerInstance!
-    }
+    func setShareTitleText(_ text:String)
+    func setShareDescriptionText(_ text:String)
+    func setShareButtonTitleText(_ text:String)
     
-    open func setScreenshotSharer(_ screenshotSharer: ScreenshotSharer)
-    {
-        self.screenshotSharerInstance = screenshotSharer
-    }
+    func setShareTitleFont(_ font:UIFont)
+    func setShareDescriptionFont(_ font:UIFont)
+    func setShareButtonTitleFont(_ font:UIFont)
     
-    open func setScreenshotImage(_ image:UIImage) {}
-    
-    open func setShareTitleText(_ text:String) {}
-    open func setShareDescriptionText(_ text:String) {}
-    open func setShareButtonTitleText(_ text:String) {}
-    
-    open func setShareTitleFont(_ font:UIFont) {}
-    open func setShareDescriptionFont(_ font:UIFont) {}
-    open func setShareButtonTitleFont(_ font:UIFont) {}
-    
-    open func setShareTitleTextColor(_ color:UIColor) {}
-    open func setShareDescriptionTextColor(_ color:UIColor) {}
-    open func setShareButtonTitleColor(_ color:UIColor) {}
-    open func setShareButtonBackgroundColor(_ color:UIColor) {}
-    
+    func setShareTitleTextColor(_ color:UIColor)
+    func setShareDescriptionTextColor(_ color:UIColor)
+    func setShareButtonTitleColor(_ color:UIColor)
+    func setShareButtonBackgroundColor(_ color:UIColor)
 }
-

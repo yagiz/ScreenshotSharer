@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -67,10 +67,10 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPN-qs-207">
-                    <rect key="frame" x="15" y="54" width="345" height="453.5"/>
+                    <rect key="frame" x="15" y="59" width="345" height="448.5"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="315" placeholderIntrinsicHeight="315" translatesAutoresizingMaskIntoConstraints="NO" id="qpO-zQ-ka1">
-                            <rect key="frame" x="150" y="0.5" width="46" height="453"/>
+                            <rect key="frame" x="150.5" y="0.5" width="45.5" height="448"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="qpO-zQ-ka1" secondAttribute="height" multiplier="1:10" id="qqM-nJ-FAc"/>
                             </constraints>
@@ -87,7 +87,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0HK-Zu-TlD">
-                    <rect key="frame" x="10" y="10" width="44" height="44"/>
+                    <rect key="frame" x="10" y="15" width="44" height="44"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="44" id="9k2-0r-h2h"/>
                         <constraint firstAttribute="height" constant="44" id="HPV-Wk-JeT"/>
@@ -111,7 +111,7 @@
                 <constraint firstItem="gRF-T3-I8g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="R3D-Cs-Aft"/>
                 <constraint firstAttribute="trailing" secondItem="gRF-T3-I8g" secondAttribute="trailing" constant="15" id="ckK-KG-rJ6"/>
                 <constraint firstAttribute="trailing" secondItem="bWq-CC-8ph" secondAttribute="trailing" constant="30" id="rfx-Lv-QdO"/>
-                <constraint firstItem="0HK-Zu-TlD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="yNy-8K-Gwn"/>
+                <constraint firstItem="0HK-Zu-TlD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="yNy-8K-Gwn"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="53.5"/>
         </view>
