@@ -32,7 +32,9 @@ open class ScreenshotSharer: NSObject
     open var isCropStatusBar:Bool = false
     open var cropRect:CGRect!
     
-    open var captureBlock:((UIImage?,ScreenshotSharerViewController?) -> ())?
+    public typealias CaptureBlock = (UIImage?,ScreenshotSharerViewController?) -> ()
+    
+    open var captureBlock:CaptureBlock?
     
     open var isEnabled:Bool = false
     open var isSharerPresented:Bool = false
@@ -44,17 +46,17 @@ open class ScreenshotSharer: NSObject
         NotificationCenter.default.addObserver(self, selector: #selector(self.applicationUserDidTakeScreenshot(notification:)), name: NSNotification.Name.UIApplicationUserDidTakeScreenshot, object: nil)
     }
     
-    open func registerViewCapturer(view:UIView, cropRect:CGRect, captureBlock:@escaping ((_ image:UIImage?,_ sharerViewController: ScreenshotSharerViewController?) -> ()))
+    open func registerViewCapturer(view:UIView, cropRect:CGRect, captureBlock:@escaping CaptureBlock)
     {
         self.registerViewCapturer(view: view, cropRect: cropRect, sharerViewController: ScreenshotSharerMinimal(nibName: "ScreenshotSharerMinimal", bundle: Bundle(for: ScreenshotSharerMinimal.self)), captureBlock: captureBlock)
     }
     
-    open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, captureBlock:@escaping ((_ image:UIImage?,_ sharerViewController: ScreenshotSharerViewController?) -> ()))
+    open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, captureBlock:@escaping CaptureBlock)
     {
         self.registerScreenCapturer(cropStatusBar: cropStatusBar, cropRect: cropRect, sharerViewController: ScreenshotSharerMinimal(nibName: "ScreenshotSharerMinimal", bundle: Bundle(for: ScreenshotSharerMinimal.self)), captureBlock: captureBlock)
     }
     
-    open func registerViewCapturer<T: UIViewController>(view:UIView, cropRect:CGRect, sharerViewController:T?, captureBlock:@escaping ((_ image:UIImage?,_ sharerViewController: ScreenshotSharerViewController?) -> ())) where T:ScreenshotSharerViewControllerProtocol
+    open func registerViewCapturer(view:UIView, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, captureBlock:@escaping CaptureBlock)
     {
         if self.isRegistered == true
         {
@@ -70,7 +72,7 @@ open class ScreenshotSharer: NSObject
         self.isEnabled = true
     }
     
-    open func registerScreenCapturer<T: UIViewController>(cropStatusBar:Bool, cropRect:CGRect, sharerViewController:T?, captureBlock:@escaping ((_ image:UIImage?,_ sharerViewController: ScreenshotSharerViewController?) -> ())) where T:ScreenshotSharerViewControllerProtocol
+    open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, captureBlock:@escaping CaptureBlock)
     {
         if self.isRegistered == true
         {

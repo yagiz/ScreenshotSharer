@@ -20,6 +20,13 @@ class ViewController: UIViewController {
         sssharer.registerScreenCapturer(cropStatusBar: true, cropRect: CGRect.zero) { (image, sharerViewController) in
             
         }
+        
+        let test = ScreenshotSharerMinimal()
+        
+        sssharer.registerScreenCapturer(cropStatusBar: false, cropRect: CGRect.zero, sharerViewController: test) { (image, sharerViewController) in
+            
+            
+        }
     }
     
     override func viewWillAppear(_ animated: Bool)
