@@ -30,22 +30,31 @@ import UIKit
     func setScreenshotSharer(_ screenshotSharer:ScreenshotSharer)
     
     func setScreenshotImage(_ image:UIImage)
-    
+}
+
+@objc public protocol ScreenshotSharerViewControllerTextProtocol
+{
     func setShareTitleText(_ text:String)
     func setShareDescriptionText(_ text:String)
     func setShareButtonTitleText(_ text:String)
-    
+}
+
+@objc public protocol ScreenshotSharerViewControllerFontProtocol
+{
     func setShareTitleFont(_ font:UIFont)
     func setShareDescriptionFont(_ font:UIFont)
     func setShareButtonTitleFont(_ font:UIFont)
-    
+}
+
+@objc public protocol ScreenshotSharerViewControllerColorProtocol
+{
     func setShareTitleTextColor(_ color:UIColor)
     func setShareDescriptionTextColor(_ color:UIColor)
     func setShareButtonTitleColor(_ color:UIColor)
     func setShareButtonBackgroundColor(_ color:UIColor)
 }
 
-@objc open class ScreenshotSharerViewController: UIViewController, ScreenshotSharerViewControllerProtocol
+@objc open class ScreenshotSharerViewController: UIViewController, ScreenshotSharerViewControllerProtocol, ScreenshotSharerViewControllerTextProtocol, ScreenshotSharerViewControllerFontProtocol, ScreenshotSharerViewControllerColorProtocol
 {
     
     open weak var screenshotSharerInstance:ScreenshotSharer?
