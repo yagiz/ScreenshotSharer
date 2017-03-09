@@ -74,26 +74,26 @@ sssharer.registerViewCapturer(view: self.view, cropRect: CGRect.zero, sender: se
     if let sharerViewController = sharerViewController
     {
         sharerViewController.view.backgroundColor = UIColor.red
-        sharerViewController.setShareTitle(title: String)
-        sharerViewController.setShareTitleFont(font: UIFont)
-        sharerViewController.setShareTitleColor(color: UIColor)
+        sharerViewController.setShareTitleText(_ text: String)
+        sharerViewController.setShareTitleFont(_ font: UIFont)
+        sharerViewController.setShareTitleColor(_ color: UIColor)
     }
 }
 ```
 These are the all the methods you can use to customize default sharer view controller:
 ```swift
-    func setShareTitle(title:String)
-    func setShareDescription(description:String)
-    func setShareButtonTitle(title:String)
+    func setShareTitleText(_ text:String)
+    func setShareDescriptionText(_ text:String)
+    func setShareButtonTitleText(_ text:String)
+
+    func setShareTitleFont(_ font:UIFont)
+    func setShareDescriptionFont(_ font:UIFont)
+    func setShareButtonTitleFont(_ font:UIFont)
     
-    func setShareTitleFont(font:UIFont)
-    func setShareDescriptionFont(font:UIFont)
-    func setShareButtonTitleFont(font:UIFont)
-    
-    func setShareTitleTextColor(color:UIColor)
-    func setShareDescriptionTextColor(color:UIColor)
-    func setShareButtonTitleColor(color:UIColor)
-    func setShareButtonBackgroundColor(color:UIColor)
+    func setShareTitleTextColor(_ color:UIColor)
+    func setShareDescriptionTextColor(_ color:UIColor)
+    func setShareButtonTitleColor(_ color:UIColor)
+    func setShareButtonBackgroundColor(_ color:UIColor)
 ```
 #### Designing Your Own Sharer View Controller
 In some cases you may want to design the whole sharer view controller from stratch. To do this your sharer view controller should extend ScreenshotSharerViewController class and you should register it to ScreenshotSharer instance. Default sharer view controller uses UIActivityViewController but you can implement your own share logic.
@@ -106,11 +106,11 @@ sssharer.registerViewCapturer(view: self.view, cropRect: CGRect.zero, sharerView
 ```
 You can use the ScreenshotSharerMinimal.swift and ScreenshotSharerMinimal.xib files as your base design. ScreenshotSharer will present your own view controller and call this method:
 ```swift
-func setScreenshotImage(image:UIImage)
+func setScreenshotImage(_ image:UIImage)
 ```
 When you want to dismiss the sharer view controller you should call this method in your own sharer view controller:
 ```swift
-self.screenshotSharer.dismissSharerViewController()
+self.screenshotSharer().dismissSharerViewController()
 ```
 
 
