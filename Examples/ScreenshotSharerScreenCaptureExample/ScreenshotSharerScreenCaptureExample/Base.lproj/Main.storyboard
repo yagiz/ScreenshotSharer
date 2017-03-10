@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScreenshotSharerScreenCaptureExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6b2-dw-4h1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTd-6w-VWW">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1405"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run the project on a device and take a screenshot." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGS-B4-Qpe">
+                                                <rect key="frame" x="20" y="20" width="335" height="57.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2w-UB-n70">
+                                                <rect key="frame" x="20" y="97.5" width="335" height="1287.5"/>
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam libero orci, ullamcorper at ultricies eu, convallis vel justo. Pellentesque ut placerat odio. Aliquam mollis auctor risus, ac molestie eros commodo et. Sed maximus pharetra condimentum. Nullam ut lectus velit. Nunc sed fermentum felis. Vestibulum consectetur imperdiet fringilla. Aliquam ut tellus nec nisi pulvinar vehicula et a leo. Praesent rhoncus ornare ex et hendrerit. Aenean eu sem tristique dui vestibulum interdum at in quam. Morbi malesuada nisi sed lectus auctor, vel luctus tortor malesuada. Nullam porta metus sit amet sem sagittis viverra. Etiam in tempor nisl. Suspendisse potenti. Pellentesque sem turpis, venenatis id lacinia ut, viverra nec ligula. Nunc non consequat quam, in dapibus risus.
+
+Phasellus mattis justo eu orci sodales, ut rhoncus neque dapibus. Pellentesque blandit turpis in nisi fermentum, vitae laoreet quam semper. Donec finibus at mi id luctus. Duis vehicula sollicitudin ante nec tempus. In sodales fringilla pharetra. Nulla semper leo libero, eu eleifend nisl rutrum faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</string>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="p2w-UB-n70" secondAttribute="trailing" constant="20" id="Dja-ik-Bdd"/>
+                                            <constraint firstAttribute="trailing" secondItem="BGS-B4-Qpe" secondAttribute="trailing" constant="20" id="NeS-bh-vZX"/>
+                                            <constraint firstItem="BGS-B4-Qpe" firstAttribute="leading" secondItem="iTd-6w-VWW" secondAttribute="leading" constant="20" id="SFX-G9-fIi"/>
+                                            <constraint firstItem="p2w-UB-n70" firstAttribute="top" secondItem="BGS-B4-Qpe" secondAttribute="bottom" constant="20" id="fpS-mR-c4g"/>
+                                            <constraint firstAttribute="bottom" secondItem="p2w-UB-n70" secondAttribute="bottom" constant="20" id="mt4-Pu-jR2"/>
+                                            <constraint firstItem="p2w-UB-n70" firstAttribute="leading" secondItem="iTd-6w-VWW" secondAttribute="leading" constant="20" id="rQB-9Q-hEY"/>
+                                            <constraint firstItem="BGS-B4-Qpe" firstAttribute="top" secondItem="iTd-6w-VWW" secondAttribute="top" constant="20" id="ytt-FH-Upk"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="iTd-6w-VWW" firstAttribute="leading" secondItem="6b2-dw-4h1" secondAttribute="leading" id="9cx-fF-zys"/>
+                                    <constraint firstAttribute="trailing" secondItem="iTd-6w-VWW" secondAttribute="trailing" id="QyX-2Z-VLu"/>
+                                    <constraint firstAttribute="bottom" secondItem="iTd-6w-VWW" secondAttribute="bottom" id="exx-Kk-K9L"/>
+                                    <constraint firstItem="iTd-6w-VWW" firstAttribute="top" secondItem="6b2-dw-4h1" secondAttribute="top" id="noO-gI-ysg"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6b2-dw-4h1" secondAttribute="trailing" id="Deo-HT-Mia"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6b2-dw-4h1" secondAttribute="bottom" id="VLj-Ll-0B7"/>
+                            <constraint firstItem="6b2-dw-4h1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XyX-xZ-8hY"/>
+                            <constraint firstItem="iTd-6w-VWW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="q3s-hg-P7c"/>
+                            <constraint firstItem="6b2-dw-4h1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="re0-h9-S7B"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ScreenshotSharer'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'ScreenshotSharer is a little Swift 3.0 pod that enables users to share screenshot image quickly.'
  
   s.description      = <<-DESC
@@ -13,6 +13,6 @@ ScreenshotSharer is a little Swift 3.0 pod that enables users to share a spesifi
   s.source           = { :git => 'https://github.com/yagiz/ScreenshotSharer.git', :tag => s.version.to_s }
  
   s.ios.deployment_target = '8.0'
-  s.source_files = 'ScreenshotSharer/Source/**/*.{swift,xib,png}'
+  s.source_files = 'Classes/**/*.{swift,xib,png}'
  
 end
