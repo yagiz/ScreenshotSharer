@@ -11,7 +11,7 @@ ScreenshotSharer is a little Swift 3.0 pod that enables users to share a specifi
 pod 'ScreenshotSharer'
 ```
 #### Manually
-Just download or clone the repo and move Source folder to your project.
+Just download or clone the repo and move Classes folder to your project.
 
 ### Usage
 You can init a new ScreeshotSharer instance to register a view or window to be captured. 
