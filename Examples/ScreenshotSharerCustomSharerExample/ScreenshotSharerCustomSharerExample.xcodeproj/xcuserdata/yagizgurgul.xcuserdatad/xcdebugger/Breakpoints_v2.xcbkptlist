@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Classes/Skins/Minimal/ScreenshotSharerMinimal.swift"
+            timestampString = "511786656.301552"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "shareButtonAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Classes/Skins/Minimal/ScreenshotSharerMinimal.swift"
+            timestampString = "511786392.550333"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "shareButtonAction(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScreenshotSharerCustomSharerExample.ScreenshotSharerMinimal.shareButtonAction (Any) -&gt; ()"
+                  moduleName = "ScreenshotSharerCustomSharerExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yagizgurgul/Documents/Lab/ScreenshotSharer/ScreenshotSharer/Classes/Skins/Minimal/ScreenshotSharerMinimal.swift"
+                  timestampString = "511786657.375868"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "856">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScreenshotSharerCustomSharerExample.ScreenshotSharerMinimal.(shareButtonAction (Any) -&gt; ()).(closure #1)"
+                  moduleName = "ScreenshotSharerCustomSharerExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yagizgurgul/Documents/Lab/ScreenshotSharer/ScreenshotSharer/Classes/Skins/Minimal/ScreenshotSharerMinimal.swift"
+                  timestampString = "511786657.378447"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -45,10 +45,12 @@ class CustomSharerViewController: ScreenshotSharerViewController {
         let activityViewController = UIActivityViewController(activityItems: activityItem as [AnyObject], applicationActivities: nil)
         self.present(activityViewController, animated: true, completion: nil)
         
-        activityViewController.completionWithItemsHandler = {
-            (s, ok, items, error) in
+        activityViewController.completionWithItemsHandler = { activity, success, items, error in
             
-            self.screenshotSharer().dismissSharerViewController()
+            if success == true && error != nil
+            {
+                self.screenshotSharer().dismissSharerViewController()
+            }
         }
     }
     
