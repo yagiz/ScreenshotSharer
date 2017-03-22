@@ -128,6 +128,7 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
         let activityViewController = UIActivityViewController(activityItems: activityItem as [AnyObject], applicationActivities: nil)
         
         activityViewController.popoverPresentationController?.sourceView = self.shareButton
+        activityViewController.popoverPresentationController?.sourceRect = self.shareButton.bounds
         
         self.present(activityViewController, animated: true, completion: nil)
         
