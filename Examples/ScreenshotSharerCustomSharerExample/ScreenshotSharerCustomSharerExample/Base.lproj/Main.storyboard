@@ -140,6 +140,7 @@ Phasellus mattis justo eu orci sodales, ut rhoncus neque dapibus. Pellentesque b
                     </view>
                     <connections>
                         <outlet property="screenshotImageView" destination="Tx5-gG-ugh" id="SQ0-vH-KIK"/>
+                        <outlet property="shareButton" destination="iuE-n7-8Jt" id="y75-Op-Pj7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOq-6p-UU4" userLabel="First Responder" sceneMemberID="firstResponder"/>

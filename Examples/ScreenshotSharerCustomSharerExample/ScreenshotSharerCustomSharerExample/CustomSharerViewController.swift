@@ -27,6 +27,7 @@ import UIKit
 class CustomSharerViewController: ScreenshotSharerViewController {
 
     @IBOutlet weak var screenshotImageView: UIImageView!
+    @IBOutlet weak var shareButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,9 @@ class CustomSharerViewController: ScreenshotSharerViewController {
     {
         let activityItem: [AnyObject] = [self.screenshotImageView.image as AnyObject]
         let activityViewController = UIActivityViewController(activityItems: activityItem as [AnyObject], applicationActivities: nil)
+        
+        activityViewController.popoverPresentationController?.sourceView = self.shareButton
+        
         self.present(activityViewController, animated: true, completion: nil)
         
         activityViewController.completionWithItemsHandler = { activity, success, items, error in

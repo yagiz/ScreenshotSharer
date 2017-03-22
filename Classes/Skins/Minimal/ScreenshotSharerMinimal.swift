@@ -126,6 +126,9 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
     {
         let activityItem: [AnyObject] = [self.screenshotImageView.image as AnyObject]
         let activityViewController = UIActivityViewController(activityItems: activityItem as [AnyObject], applicationActivities: nil)
+        
+        activityViewController.popoverPresentationController?.sourceView = self.shareButton
+        
         self.present(activityViewController, animated: true, completion: nil)
         
         activityViewController.completionWithItemsHandler = { activity, success, items, error in
