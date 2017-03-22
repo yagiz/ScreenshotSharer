@@ -134,7 +134,7 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
         
         activityViewController.completionWithItemsHandler = { activity, success, items, error in
             
-            if success == true && error != nil
+            if success == true && error == nil
             {
                 self.screenshotSharer().dismissSharerViewController()
             }
