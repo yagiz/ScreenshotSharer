@@ -136,13 +136,13 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
             
             if success == true && error == nil
             {
-                self.screenshotSharer().dismissSharerViewController()
+                self.screenshotSharer().dismissSharerViewController(true)
             }
         }
     }
     
     @IBAction func dismissButtonAction(_ sender: Any)
     {
-        self.screenshotSharer().dismissSharerViewController()
+        self.screenshotSharer().dismissSharerViewController(false)
     }
 }

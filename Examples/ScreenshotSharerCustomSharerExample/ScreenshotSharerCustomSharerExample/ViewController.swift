@@ -34,10 +34,10 @@ class ViewController: UIViewController {
         
         let customSharer = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CustomSharerViewController") as! CustomSharerViewController
         
-        sssharer.registerScreenCapturer(cropStatusBar: true, cropRect: CGRect.zero, sharerViewController: customSharer) { (image, customScreenshotSharerViewController) in
+        sssharer.registerScreenCapturer(cropStatusBar: true, cropRect: CGRect.zero, sharerViewController: customSharer, captureBlock: { (image, customScreenshotSharerViewController) in
             
+        }) { (isSuccess) in
             
-
         }
     }
     

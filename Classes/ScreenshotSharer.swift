@@ -33,6 +33,7 @@ open class ScreenshotSharer: NSObject
     open var cropRect:CGRect!
     
     open var captureBlock:((UIImage?,ScreenshotSharerViewController?) -> ())?
+    open var shareCompletionBlock:((Bool) -> ())?
     
     open var isEnabled:Bool = false
     open var isSharerPresented:Bool = false
@@ -44,17 +45,17 @@ open class ScreenshotSharer: NSObject
         NotificationCenter.default.addObserver(self, selector: #selector(self.applicationUserDidTakeScreenshot(notification:)), name: NSNotification.Name.UIApplicationUserDidTakeScreenshot, object: nil)
     }
     
-    open func registerViewCapturer(view:UIView, cropRect:CGRect, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()))
+    open func registerViewCapturer(view:UIView, cropRect:CGRect, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()), shareCompletionBlock:@escaping ((Bool) -> ()))
     {
-        self.registerViewCapturer(view: view, cropRect: cropRect, sharerViewController: ScreenshotSharerMinimal(nibName: "ScreenshotSharerMinimal", bundle: Bundle(for: ScreenshotSharerMinimal.self)), captureBlock: captureBlock)
+        self.registerViewCapturer(view: view, cropRect: cropRect, sharerViewController: ScreenshotSharerMinimal(nibName: "ScreenshotSharerMinimal", bundle: Bundle(for: ScreenshotSharerMinimal.self)), captureBlock: captureBlock, shareCompletionBlock: shareCompletionBlock)
     }
     
-    open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()))
+    open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()), shareCompletionBlock:@escaping ((Bool) -> ()))
     {
-        self.registerScreenCapturer(cropStatusBar: cropStatusBar, cropRect: cropRect, sharerViewController: ScreenshotSharerMinimal(nibName: "ScreenshotSharerMinimal", bundle: Bundle(for: ScreenshotSharerMinimal.self)), captureBlock: captureBlock)
+        self.registerScreenCapturer(cropStatusBar: cropStatusBar, cropRect: cropRect, sharerViewController: ScreenshotSharerMinimal(nibName: "ScreenshotSharerMinimal", bundle: Bundle(for: ScreenshotSharerMinimal.self)), captureBlock: captureBlock, shareCompletionBlock: shareCompletionBlock)
     }
     
-    open func registerViewCapturer(view:UIView, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()))
+    open func registerViewCapturer(view:UIView, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()), shareCompletionBlock:@escaping ((Bool) -> ()))
     {
         if self.isRegistered == true
         {
@@ -65,12 +66,13 @@ open class ScreenshotSharer: NSObject
         self.cropRect = cropRect
         self.sharerViewController = sharerViewController
         self.captureBlock = captureBlock
+        self.shareCompletionBlock = shareCompletionBlock
         
         self.isRegistered = true
         self.isEnabled = true
     }
     
-    open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()))
+    open func registerScreenCapturer(cropStatusBar:Bool, cropRect:CGRect, sharerViewController:ScreenshotSharerViewController?, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()), shareCompletionBlock:@escaping ((Bool) -> ()))
     {
         if self.isRegistered == true
         {
@@ -81,6 +83,7 @@ open class ScreenshotSharer: NSObject
         self.cropRect = cropRect
         self.sharerViewController = sharerViewController
         self.captureBlock = captureBlock
+        self.shareCompletionBlock = shareCompletionBlock
         
         self.capturedView = nil
         
@@ -192,12 +195,16 @@ open class ScreenshotSharer: NSObject
         return image
     }
     
-    open func dismissSharerViewController()
+    open func dismissSharerViewController(_ isSuccess:Bool)
     {
         sharerViewController?.dismiss(animated: true, completion: {
             
             self.isSharerPresented = false
             
+            if let shareCompletionBlock = self.shareCompletionBlock
+            {
+                shareCompletionBlock(isSuccess)
+            }
         })
     }
     
