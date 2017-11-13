@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     {
         super.viewDidLoad()
         
-        sssharer.registerScreenCapturer(cropStatusBar: true, cropRect: CGRect.zero, captureBlock: { (image, screenshotSharerViewController) in
+        sssharer.registerScreenCapturer(cropStatusBar: false, cropRect: CGRect.zero, captureBlock: { (image, screenshotSharerViewController) in
             
         }) { (isSuccess) in
             

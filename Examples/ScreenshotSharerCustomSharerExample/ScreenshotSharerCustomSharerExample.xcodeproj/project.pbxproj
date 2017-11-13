@@ -12,15 +12,15 @@
 		BC71EFB31E728EFF00A0FF52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC71EFB11E728EFF00A0FF52 /* Main.storyboard */; };
 		BC71EFB51E728EFF00A0FF52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC71EFB41E728EFF00A0FF52 /* Assets.xcassets */; };
 		BC71EFB81E728EFF00A0FF52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC71EFB61E728EFF00A0FF52 /* LaunchScreen.storyboard */; };
-		BC71EFCB1E728F0900A0FF52 /* ScreenshotSharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71EFC01E728F0900A0FF52 /* ScreenshotSharer.swift */; };
-		BC71EFCC1E728F0900A0FF52 /* ScreenshotSharerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71EFC11E728F0900A0FF52 /* ScreenshotSharerUtility.swift */; };
-		BC71EFCD1E728F0900A0FF52 /* ScreenshotSharerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71EFC21E728F0900A0FF52 /* ScreenshotSharerViewController.swift */; };
-		BC71EFCE1E728F0900A0FF52 /* ic_dismiss.png in Resources */ = {isa = PBXBuildFile; fileRef = BC71EFC61E728F0900A0FF52 /* ic_dismiss.png */; };
-		BC71EFCF1E728F0900A0FF52 /* ic_dismiss@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC71EFC71E728F0900A0FF52 /* ic_dismiss@2x.png */; };
-		BC71EFD01E728F0900A0FF52 /* ic_dismiss@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC71EFC81E728F0900A0FF52 /* ic_dismiss@3x.png */; };
-		BC71EFD11E728F0900A0FF52 /* ScreenshotSharerMinimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71EFC91E728F0900A0FF52 /* ScreenshotSharerMinimal.swift */; };
-		BC71EFD21E728F0900A0FF52 /* ScreenshotSharerMinimal.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC71EFCA1E728F0900A0FF52 /* ScreenshotSharerMinimal.xib */; };
 		BC71EFD41E728F4A00A0FF52 /* CustomSharerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71EFD31E728F4A00A0FF52 /* CustomSharerViewController.swift */; };
+		BCEDE2C81F18B5C200B9E0D5 /* ScreenshotSharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEDE2BD1F18B5C200B9E0D5 /* ScreenshotSharer.swift */; };
+		BCEDE2C91F18B5C200B9E0D5 /* ScreenshotSharerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEDE2BE1F18B5C200B9E0D5 /* ScreenshotSharerUtility.swift */; };
+		BCEDE2CA1F18B5C200B9E0D5 /* ScreenshotSharerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEDE2BF1F18B5C200B9E0D5 /* ScreenshotSharerViewController.swift */; };
+		BCEDE2CB1F18B5C200B9E0D5 /* ic_dismiss.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDE2C31F18B5C200B9E0D5 /* ic_dismiss.png */; };
+		BCEDE2CC1F18B5C200B9E0D5 /* ic_dismiss@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDE2C41F18B5C200B9E0D5 /* ic_dismiss@2x.png */; };
+		BCEDE2CD1F18B5C200B9E0D5 /* ic_dismiss@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDE2C51F18B5C200B9E0D5 /* ic_dismiss@3x.png */; };
+		BCEDE2CE1F18B5C200B9E0D5 /* ScreenshotSharerMinimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEDE2C61F18B5C200B9E0D5 /* ScreenshotSharerMinimal.swift */; };
+		BCEDE2CF1F18B5C200B9E0D5 /* ScreenshotSharerMinimal.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEDE2C71F18B5C200B9E0D5 /* ScreenshotSharerMinimal.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,15 +31,15 @@
 		BC71EFB41E728EFF00A0FF52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC71EFB71E728EFF00A0FF52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC71EFB91E728EFF00A0FF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC71EFC01E728F0900A0FF52 /* ScreenshotSharer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharer.swift; sourceTree = "<group>"; };
-		BC71EFC11E728F0900A0FF52 /* ScreenshotSharerUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerUtility.swift; sourceTree = "<group>"; };
-		BC71EFC21E728F0900A0FF52 /* ScreenshotSharerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerViewController.swift; sourceTree = "<group>"; };
-		BC71EFC61E728F0900A0FF52 /* ic_dismiss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_dismiss.png; sourceTree = "<group>"; };
-		BC71EFC71E728F0900A0FF52 /* ic_dismiss@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dismiss@2x.png"; sourceTree = "<group>"; };
-		BC71EFC81E728F0900A0FF52 /* ic_dismiss@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dismiss@3x.png"; sourceTree = "<group>"; };
-		BC71EFC91E728F0900A0FF52 /* ScreenshotSharerMinimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerMinimal.swift; sourceTree = "<group>"; };
-		BC71EFCA1E728F0900A0FF52 /* ScreenshotSharerMinimal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScreenshotSharerMinimal.xib; sourceTree = "<group>"; };
 		BC71EFD31E728F4A00A0FF52 /* CustomSharerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSharerViewController.swift; sourceTree = "<group>"; };
+		BCEDE2BD1F18B5C200B9E0D5 /* ScreenshotSharer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharer.swift; sourceTree = "<group>"; };
+		BCEDE2BE1F18B5C200B9E0D5 /* ScreenshotSharerUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerUtility.swift; sourceTree = "<group>"; };
+		BCEDE2BF1F18B5C200B9E0D5 /* ScreenshotSharerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerViewController.swift; sourceTree = "<group>"; };
+		BCEDE2C31F18B5C200B9E0D5 /* ic_dismiss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_dismiss.png; sourceTree = "<group>"; };
+		BCEDE2C41F18B5C200B9E0D5 /* ic_dismiss@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dismiss@2x.png"; sourceTree = "<group>"; };
+		BCEDE2C51F18B5C200B9E0D5 /* ic_dismiss@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dismiss@3x.png"; sourceTree = "<group>"; };
+		BCEDE2C61F18B5C200B9E0D5 /* ScreenshotSharerMinimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerMinimal.swift; sourceTree = "<group>"; };
+		BCEDE2C71F18B5C200B9E0D5 /* ScreenshotSharerMinimal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScreenshotSharerMinimal.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 		BC71EFAC1E728EFF00A0FF52 /* ScreenshotSharerCustomSharerExample */ = {
 			isa = PBXGroup;
 			children = (
-				BC71EFBF1E728F0900A0FF52 /* Classes */,
+				BCEDE2BC1F18B5C200B9E0D5 /* Classes */,
 				BC71EFAD1E728EFF00A0FF52 /* AppDelegate.swift */,
 				BC71EFAF1E728EFF00A0FF52 /* ViewController.swift */,
 				BC71EFD31E728F4A00A0FF52 /* CustomSharerViewController.swift */,
@@ -84,42 +84,41 @@
 			path = ScreenshotSharerCustomSharerExample;
 			sourceTree = "<group>";
 		};
-		BC71EFBF1E728F0900A0FF52 /* Classes */ = {
+		BCEDE2BC1F18B5C200B9E0D5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BC71EFC01E728F0900A0FF52 /* ScreenshotSharer.swift */,
-				BC71EFC11E728F0900A0FF52 /* ScreenshotSharerUtility.swift */,
-				BC71EFC21E728F0900A0FF52 /* ScreenshotSharerViewController.swift */,
-				BC71EFC31E728F0900A0FF52 /* Skins */,
+				BCEDE2BD1F18B5C200B9E0D5 /* ScreenshotSharer.swift */,
+				BCEDE2BE1F18B5C200B9E0D5 /* ScreenshotSharerUtility.swift */,
+				BCEDE2BF1F18B5C200B9E0D5 /* ScreenshotSharerViewController.swift */,
+				BCEDE2C01F18B5C200B9E0D5 /* Skins */,
 			);
-			name = Classes;
-			path = ../../../Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		BC71EFC31E728F0900A0FF52 /* Skins */ = {
+		BCEDE2C01F18B5C200B9E0D5 /* Skins */ = {
 			isa = PBXGroup;
 			children = (
-				BC71EFC41E728F0900A0FF52 /* Minimal */,
+				BCEDE2C11F18B5C200B9E0D5 /* Minimal */,
 			);
 			path = Skins;
 			sourceTree = "<group>";
 		};
-		BC71EFC41E728F0900A0FF52 /* Minimal */ = {
+		BCEDE2C11F18B5C200B9E0D5 /* Minimal */ = {
 			isa = PBXGroup;
 			children = (
-				BC71EFC51E728F0900A0FF52 /* Assets */,
-				BC71EFC91E728F0900A0FF52 /* ScreenshotSharerMinimal.swift */,
-				BC71EFCA1E728F0900A0FF52 /* ScreenshotSharerMinimal.xib */,
+				BCEDE2C21F18B5C200B9E0D5 /* Assets */,
+				BCEDE2C61F18B5C200B9E0D5 /* ScreenshotSharerMinimal.swift */,
+				BCEDE2C71F18B5C200B9E0D5 /* ScreenshotSharerMinimal.xib */,
 			);
 			path = Minimal;
 			sourceTree = "<group>";
 		};
-		BC71EFC51E728F0900A0FF52 /* Assets */ = {
+		BCEDE2C21F18B5C200B9E0D5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				BC71EFC61E728F0900A0FF52 /* ic_dismiss.png */,
-				BC71EFC71E728F0900A0FF52 /* ic_dismiss@2x.png */,
-				BC71EFC81E728F0900A0FF52 /* ic_dismiss@3x.png */,
+				BCEDE2C31F18B5C200B9E0D5 /* ic_dismiss.png */,
+				BCEDE2C41F18B5C200B9E0D5 /* ic_dismiss@2x.png */,
+				BCEDE2C51F18B5C200B9E0D5 /* ic_dismiss@3x.png */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -184,12 +183,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC71EFCF1E728F0900A0FF52 /* ic_dismiss@2x.png in Resources */,
-				BC71EFD21E728F0900A0FF52 /* ScreenshotSharerMinimal.xib in Resources */,
-				BC71EFCE1E728F0900A0FF52 /* ic_dismiss.png in Resources */,
+				BCEDE2CC1F18B5C200B9E0D5 /* ic_dismiss@2x.png in Resources */,
+				BCEDE2CF1F18B5C200B9E0D5 /* ScreenshotSharerMinimal.xib in Resources */,
+				BCEDE2CB1F18B5C200B9E0D5 /* ic_dismiss.png in Resources */,
 				BC71EFB81E728EFF00A0FF52 /* LaunchScreen.storyboard in Resources */,
 				BC71EFB51E728EFF00A0FF52 /* Assets.xcassets in Resources */,
-				BC71EFD01E728F0900A0FF52 /* ic_dismiss@3x.png in Resources */,
+				BCEDE2CD1F18B5C200B9E0D5 /* ic_dismiss@3x.png in Resources */,
 				BC71EFB31E728EFF00A0FF52 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,13 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC71EFD11E728F0900A0FF52 /* ScreenshotSharerMinimal.swift in Sources */,
-				BC71EFCD1E728F0900A0FF52 /* ScreenshotSharerViewController.swift in Sources */,
+				BCEDE2C81F18B5C200B9E0D5 /* ScreenshotSharer.swift in Sources */,
+				BCEDE2CE1F18B5C200B9E0D5 /* ScreenshotSharerMinimal.swift in Sources */,
 				BC71EFD41E728F4A00A0FF52 /* CustomSharerViewController.swift in Sources */,
+				BCEDE2C91F18B5C200B9E0D5 /* ScreenshotSharerUtility.swift in Sources */,
+				BCEDE2CA1F18B5C200B9E0D5 /* ScreenshotSharerViewController.swift in Sources */,
 				BC71EFB01E728EFF00A0FF52 /* ViewController.swift in Sources */,
-				BC71EFCB1E728F0900A0FF52 /* ScreenshotSharer.swift in Sources */,
 				BC71EFAE1E728EFF00A0FF52 /* AppDelegate.swift in Sources */,
-				BC71EFCC1E728F0900A0FF52 /* ScreenshotSharerUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

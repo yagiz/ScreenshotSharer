@@ -7,22 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC5A64031F18B5FC00AEE8F5 /* ScreenshotSharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A63F81F18B5FC00AEE8F5 /* ScreenshotSharer.swift */; };
+		BC5A64041F18B5FC00AEE8F5 /* ScreenshotSharerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A63F91F18B5FC00AEE8F5 /* ScreenshotSharerUtility.swift */; };
+		BC5A64051F18B5FC00AEE8F5 /* ScreenshotSharerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A63FA1F18B5FC00AEE8F5 /* ScreenshotSharerViewController.swift */; };
+		BC5A64061F18B5FC00AEE8F5 /* ic_dismiss.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5A63FE1F18B5FC00AEE8F5 /* ic_dismiss.png */; };
+		BC5A64071F18B5FC00AEE8F5 /* ic_dismiss@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5A63FF1F18B5FC00AEE8F5 /* ic_dismiss@2x.png */; };
+		BC5A64081F18B5FC00AEE8F5 /* ic_dismiss@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5A64001F18B5FC00AEE8F5 /* ic_dismiss@3x.png */; };
+		BC5A64091F18B5FC00AEE8F5 /* ScreenshotSharerMinimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A64011F18B5FC00AEE8F5 /* ScreenshotSharerMinimal.swift */; };
+		BC5A640A1F18B5FC00AEE8F5 /* ScreenshotSharerMinimal.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5A64021F18B5FC00AEE8F5 /* ScreenshotSharerMinimal.xib */; };
 		BC71EF7C1E728DE400A0FF52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71EF7B1E728DE400A0FF52 /* AppDelegate.swift */; };
 		BC71EF7E1E728DE400A0FF52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71EF7D1E728DE400A0FF52 /* ViewController.swift */; };
 		BC71EF811E728DE400A0FF52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC71EF7F1E728DE400A0FF52 /* Main.storyboard */; };
 		BC71EF831E728DE400A0FF52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC71EF821E728DE400A0FF52 /* Assets.xcassets */; };
 		BC71EF861E728DE400A0FF52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC71EF841E728DE400A0FF52 /* LaunchScreen.storyboard */; };
-		BC71EF991E728E7800A0FF52 /* ScreenshotSharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71EF8E1E728E7800A0FF52 /* ScreenshotSharer.swift */; };
-		BC71EF9A1E728E7800A0FF52 /* ScreenshotSharerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71EF8F1E728E7800A0FF52 /* ScreenshotSharerUtility.swift */; };
-		BC71EF9B1E728E7800A0FF52 /* ScreenshotSharerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71EF901E728E7800A0FF52 /* ScreenshotSharerViewController.swift */; };
-		BC71EF9C1E728E7800A0FF52 /* ic_dismiss.png in Resources */ = {isa = PBXBuildFile; fileRef = BC71EF941E728E7800A0FF52 /* ic_dismiss.png */; };
-		BC71EF9D1E728E7800A0FF52 /* ic_dismiss@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC71EF951E728E7800A0FF52 /* ic_dismiss@2x.png */; };
-		BC71EF9E1E728E7800A0FF52 /* ic_dismiss@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC71EF961E728E7800A0FF52 /* ic_dismiss@3x.png */; };
-		BC71EF9F1E728E7800A0FF52 /* ScreenshotSharerMinimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71EF971E728E7800A0FF52 /* ScreenshotSharerMinimal.swift */; };
-		BC71EFA01E728E7800A0FF52 /* ScreenshotSharerMinimal.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC71EF981E728E7800A0FF52 /* ScreenshotSharerMinimal.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC5A63F81F18B5FC00AEE8F5 /* ScreenshotSharer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharer.swift; sourceTree = "<group>"; };
+		BC5A63F91F18B5FC00AEE8F5 /* ScreenshotSharerUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerUtility.swift; sourceTree = "<group>"; };
+		BC5A63FA1F18B5FC00AEE8F5 /* ScreenshotSharerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerViewController.swift; sourceTree = "<group>"; };
+		BC5A63FE1F18B5FC00AEE8F5 /* ic_dismiss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_dismiss.png; sourceTree = "<group>"; };
+		BC5A63FF1F18B5FC00AEE8F5 /* ic_dismiss@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dismiss@2x.png"; sourceTree = "<group>"; };
+		BC5A64001F18B5FC00AEE8F5 /* ic_dismiss@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dismiss@3x.png"; sourceTree = "<group>"; };
+		BC5A64011F18B5FC00AEE8F5 /* ScreenshotSharerMinimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerMinimal.swift; sourceTree = "<group>"; };
+		BC5A64021F18B5FC00AEE8F5 /* ScreenshotSharerMinimal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScreenshotSharerMinimal.xib; sourceTree = "<group>"; };
 		BC71EF781E728DE400A0FF52 /* ScreenshotSharerViewCaptureExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenshotSharerViewCaptureExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC71EF7B1E728DE400A0FF52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC71EF7D1E728DE400A0FF52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,14 +38,6 @@
 		BC71EF821E728DE400A0FF52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC71EF851E728DE400A0FF52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC71EF871E728DE400A0FF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC71EF8E1E728E7800A0FF52 /* ScreenshotSharer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharer.swift; sourceTree = "<group>"; };
-		BC71EF8F1E728E7800A0FF52 /* ScreenshotSharerUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerUtility.swift; sourceTree = "<group>"; };
-		BC71EF901E728E7800A0FF52 /* ScreenshotSharerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerViewController.swift; sourceTree = "<group>"; };
-		BC71EF941E728E7800A0FF52 /* ic_dismiss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_dismiss.png; sourceTree = "<group>"; };
-		BC71EF951E728E7800A0FF52 /* ic_dismiss@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dismiss@2x.png"; sourceTree = "<group>"; };
-		BC71EF961E728E7800A0FF52 /* ic_dismiss@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dismiss@3x.png"; sourceTree = "<group>"; };
-		BC71EF971E728E7800A0FF52 /* ScreenshotSharerMinimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerMinimal.swift; sourceTree = "<group>"; };
-		BC71EF981E728E7800A0FF52 /* ScreenshotSharerMinimal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScreenshotSharerMinimal.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +51,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC5A63F71F18B5FC00AEE8F5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A63F81F18B5FC00AEE8F5 /* ScreenshotSharer.swift */,
+				BC5A63F91F18B5FC00AEE8F5 /* ScreenshotSharerUtility.swift */,
+				BC5A63FA1F18B5FC00AEE8F5 /* ScreenshotSharerViewController.swift */,
+				BC5A63FB1F18B5FC00AEE8F5 /* Skins */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BC5A63FB1F18B5FC00AEE8F5 /* Skins */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A63FC1F18B5FC00AEE8F5 /* Minimal */,
+			);
+			path = Skins;
+			sourceTree = "<group>";
+		};
+		BC5A63FC1F18B5FC00AEE8F5 /* Minimal */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A63FD1F18B5FC00AEE8F5 /* Assets */,
+				BC5A64011F18B5FC00AEE8F5 /* ScreenshotSharerMinimal.swift */,
+				BC5A64021F18B5FC00AEE8F5 /* ScreenshotSharerMinimal.xib */,
+			);
+			path = Minimal;
+			sourceTree = "<group>";
+		};
+		BC5A63FD1F18B5FC00AEE8F5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A63FE1F18B5FC00AEE8F5 /* ic_dismiss.png */,
+				BC5A63FF1F18B5FC00AEE8F5 /* ic_dismiss@2x.png */,
+				BC5A64001F18B5FC00AEE8F5 /* ic_dismiss@3x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		BC71EF6F1E728DE400A0FF52 = {
 			isa = PBXGroup;
 			children = (
@@ -70,7 +109,7 @@
 		BC71EF7A1E728DE400A0FF52 /* ScreenshotSharerViewCaptureExample */ = {
 			isa = PBXGroup;
 			children = (
-				BC71EF8D1E728E7800A0FF52 /* Classes */,
+				BC5A63F71F18B5FC00AEE8F5 /* Classes */,
 				BC71EF7B1E728DE400A0FF52 /* AppDelegate.swift */,
 				BC71EF7D1E728DE400A0FF52 /* ViewController.swift */,
 				BC71EF7F1E728DE400A0FF52 /* Main.storyboard */,
@@ -79,46 +118,6 @@
 				BC71EF871E728DE400A0FF52 /* Info.plist */,
 			);
 			path = ScreenshotSharerViewCaptureExample;
-			sourceTree = "<group>";
-		};
-		BC71EF8D1E728E7800A0FF52 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				BC71EF8E1E728E7800A0FF52 /* ScreenshotSharer.swift */,
-				BC71EF8F1E728E7800A0FF52 /* ScreenshotSharerUtility.swift */,
-				BC71EF901E728E7800A0FF52 /* ScreenshotSharerViewController.swift */,
-				BC71EF911E728E7800A0FF52 /* Skins */,
-			);
-			name = Classes;
-			path = ../../../Classes;
-			sourceTree = "<group>";
-		};
-		BC71EF911E728E7800A0FF52 /* Skins */ = {
-			isa = PBXGroup;
-			children = (
-				BC71EF921E728E7800A0FF52 /* Minimal */,
-			);
-			path = Skins;
-			sourceTree = "<group>";
-		};
-		BC71EF921E728E7800A0FF52 /* Minimal */ = {
-			isa = PBXGroup;
-			children = (
-				BC71EF931E728E7800A0FF52 /* Assets */,
-				BC71EF971E728E7800A0FF52 /* ScreenshotSharerMinimal.swift */,
-				BC71EF981E728E7800A0FF52 /* ScreenshotSharerMinimal.xib */,
-			);
-			path = Minimal;
-			sourceTree = "<group>";
-		};
-		BC71EF931E728E7800A0FF52 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				BC71EF941E728E7800A0FF52 /* ic_dismiss.png */,
-				BC71EF951E728E7800A0FF52 /* ic_dismiss@2x.png */,
-				BC71EF961E728E7800A0FF52 /* ic_dismiss@3x.png */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,12 +180,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC71EF9D1E728E7800A0FF52 /* ic_dismiss@2x.png in Resources */,
-				BC71EFA01E728E7800A0FF52 /* ScreenshotSharerMinimal.xib in Resources */,
-				BC71EF9C1E728E7800A0FF52 /* ic_dismiss.png in Resources */,
+				BC5A64071F18B5FC00AEE8F5 /* ic_dismiss@2x.png in Resources */,
+				BC5A640A1F18B5FC00AEE8F5 /* ScreenshotSharerMinimal.xib in Resources */,
+				BC5A64061F18B5FC00AEE8F5 /* ic_dismiss.png in Resources */,
 				BC71EF861E728DE400A0FF52 /* LaunchScreen.storyboard in Resources */,
 				BC71EF831E728DE400A0FF52 /* Assets.xcassets in Resources */,
-				BC71EF9E1E728E7800A0FF52 /* ic_dismiss@3x.png in Resources */,
+				BC5A64081F18B5FC00AEE8F5 /* ic_dismiss@3x.png in Resources */,
 				BC71EF811E728DE400A0FF52 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,12 +197,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC71EF9F1E728E7800A0FF52 /* ScreenshotSharerMinimal.swift in Sources */,
-				BC71EF9B1E728E7800A0FF52 /* ScreenshotSharerViewController.swift in Sources */,
+				BC5A64091F18B5FC00AEE8F5 /* ScreenshotSharerMinimal.swift in Sources */,
+				BC5A64051F18B5FC00AEE8F5 /* ScreenshotSharerViewController.swift in Sources */,
 				BC71EF7E1E728DE400A0FF52 /* ViewController.swift in Sources */,
-				BC71EF991E728E7800A0FF52 /* ScreenshotSharer.swift in Sources */,
+				BC5A64031F18B5FC00AEE8F5 /* ScreenshotSharer.swift in Sources */,
 				BC71EF7C1E728DE400A0FF52 /* AppDelegate.swift in Sources */,
-				BC71EF9A1E728E7800A0FF52 /* ScreenshotSharerUtility.swift in Sources */,
+				BC5A64041F18B5FC00AEE8F5 /* ScreenshotSharerUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
