@@ -131,12 +131,12 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
         activityViewController.completionWithItemsHandler = {
             (s, ok, items, error) in
             
-            self.screenshotSharer()?.dismissSharerViewController()
+            self.screenshotSharer()?.dismissSharerViewController(true)
         }
     }
     
     @IBAction func dismissButtonAction(_ sender: Any)
     {
-        self.screenshotSharer()?.dismissSharerViewController()
+        self.screenshotSharer()?.dismissSharerViewController(false)
     }
 }

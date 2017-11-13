@@ -126,23 +126,17 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
     {
         let activityItem: [AnyObject] = [self.screenshotImageView.image as AnyObject]
         let activityViewController = UIActivityViewController(activityItems: activityItem as [AnyObject], applicationActivities: nil)
-        
-        activityViewController.popoverPresentationController?.sourceView = self.shareButton
-        activityViewController.popoverPresentationController?.sourceRect = self.shareButton.bounds
-        
         self.present(activityViewController, animated: true, completion: nil)
         
-        activityViewController.completionWithItemsHandler = { activity, success, items, error in
+        activityViewController.completionWithItemsHandler = {
+            (s, ok, items, error) in
             
-            if success == true && error == nil
-            {
-                self.screenshotSharer().dismissSharerViewController(true)
-            }
+            self.screenshotSharer()?.dismissSharerViewController(true)
         }
     }
     
     @IBAction func dismissButtonAction(_ sender: Any)
     {
-        self.screenshotSharer().dismissSharerViewController(false)
+        self.screenshotSharer()?.dismissSharerViewController(false)
     }
 }

@@ -54,13 +54,13 @@ class CustomSharerViewController: ScreenshotSharerViewController {
             
             if success == true && error == nil
             {
-                self.screenshotSharer().dismissSharerViewController(true)
+                self.screenshotSharer()?.dismissSharerViewController(true)
             }
         }
     }
     
     @IBAction func cancelButtonAction(_ sender: Any) {
         
-        self.screenshotSharer().dismissSharerViewController(false)
+        self.screenshotSharer()?.dismissSharerViewController(false)
     }
 }

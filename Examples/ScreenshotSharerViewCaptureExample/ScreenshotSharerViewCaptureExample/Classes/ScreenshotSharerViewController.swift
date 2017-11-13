@@ -26,7 +26,7 @@ import UIKit
 
 @objc public protocol ScreenshotSharerViewControllerProtocol
 {
-    func screenshotSharer() -> ScreenshotSharer
+    func screenshotSharer() -> ScreenshotSharer?
     func setScreenshotSharer(_ screenshotSharer:ScreenshotSharer)
     
     func setScreenshotImage(_ image:UIImage)
@@ -59,9 +59,9 @@ import UIKit
     
     open weak var screenshotSharerInstance:ScreenshotSharer?
     
-    open func screenshotSharer() -> ScreenshotSharer
+    open func screenshotSharer() -> ScreenshotSharer?
     {
-        return self.screenshotSharerInstance!
+        return self.screenshotSharerInstance
     }
     
     open func setScreenshotSharer(_ screenshotSharer: ScreenshotSharer)
