@@ -125,7 +125,7 @@ func setScreenshotImage(_ image:UIImage)
 ```
 Therefore you should implement ```setScreenshotImage(_ image:UIImage)``` method. When you want to dismiss the sharer view controller you should call this method in your own sharer view controller:
 ```swift
-self.screenshotSharer().dismissSharerViewController(isSuccess)
+self.screenshotSharer()?.dismissSharerViewController(isSuccess)
 ```
 ```isSuccess``` indicates that sharing is completed successfully.
 
