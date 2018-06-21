@@ -103,7 +103,7 @@ open class ScreenshotSharer: NSObject
     }
     
     
-    func applicationUserDidTakeScreenshot(notification:NSNotification)
+    @objc func applicationUserDidTakeScreenshot(notification:NSNotification)
     {
         let sender = ScreenshotSharerUtility.findTopMostViewController()
         
