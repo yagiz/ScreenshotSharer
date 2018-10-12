@@ -42,7 +42,7 @@ open class ScreenshotSharer: NSObject
     override public init()
     {
         super.init()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationUserDidTakeScreenshot(notification:)), name: NSNotification.Name.UIApplicationUserDidTakeScreenshot, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationUserDidTakeScreenshot(notification:)), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
     }
     
     open func registerViewCapturer(view:UIView, cropRect:CGRect, captureBlock:@escaping ((UIImage?,ScreenshotSharerViewController?) -> ()), shareCompletionBlock:@escaping ((Bool) -> ()))
@@ -103,7 +103,7 @@ open class ScreenshotSharer: NSObject
     }
     
     
-    func applicationUserDidTakeScreenshot(notification:NSNotification)
+    @objc func applicationUserDidTakeScreenshot(notification:NSNotification)
     {
         let sender = ScreenshotSharerUtility.findTopMostViewController()
         
