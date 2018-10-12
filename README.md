@@ -1,5 +1,5 @@
 # ScreenshotSharer
-ScreenshotSharer is a little Swift 3.0 pod that enables users to share a specific part of the view or the whole screen when they took a screenshot. It's heavily inspired from Asos app and highly customizable. 
+ScreenshotSharer is a little Swift 4.2 pod that enables users to share a specific part of the view or the whole screen when they took a screenshot. It's heavily inspired from Asos app and highly customizable. 
 
 ### Preview
 ![](https://github.com/yagiz/ScreenshotSharer/blob/master/screenshots/preview.gif?raw=true)
