@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -103,7 +103,7 @@
                 <constraint firstItem="0HK-Zu-TlD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="2bH-At-z0i"/>
                 <constraint firstItem="bWq-CC-8ph" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="441-mZ-nqQ"/>
                 <constraint firstItem="YPN-qs-207" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="6PU-JQ-g6p"/>
-                <constraint firstAttribute="bottom" secondItem="gRF-T3-I8g" secondAttribute="bottom" constant="15" id="9AU-r4-129"/>
+                <constraint firstItem="gcE-1P-G08" firstAttribute="bottom" secondItem="gRF-T3-I8g" secondAttribute="bottom" constant="15" id="9AU-r4-129"/>
                 <constraint firstItem="bWq-CC-8ph" firstAttribute="top" secondItem="YPN-qs-207" secondAttribute="bottom" constant="20" id="9KP-NO-yq5"/>
                 <constraint firstItem="gRF-T3-I8g" firstAttribute="top" secondItem="bWq-CC-8ph" secondAttribute="bottom" constant="20" id="Aqy-wS-1IG"/>
                 <constraint firstItem="YPN-qs-207" firstAttribute="top" secondItem="0HK-Zu-TlD" secondAttribute="bottom" id="L6O-Dt-cLF"/>
@@ -111,8 +111,9 @@
                 <constraint firstItem="gRF-T3-I8g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="R3D-Cs-Aft"/>
                 <constraint firstAttribute="trailing" secondItem="gRF-T3-I8g" secondAttribute="trailing" constant="15" id="ckK-KG-rJ6"/>
                 <constraint firstAttribute="trailing" secondItem="bWq-CC-8ph" secondAttribute="trailing" constant="30" id="rfx-Lv-QdO"/>
-                <constraint firstItem="0HK-Zu-TlD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="yNy-8K-Gwn"/>
+                <constraint firstItem="0HK-Zu-TlD" firstAttribute="top" secondItem="gcE-1P-G08" secondAttribute="top" constant="-5" id="yNy-8K-Gwn"/>
             </constraints>
+            <viewLayoutGuide key="safeArea" id="gcE-1P-G08"/>
             <point key="canvasLocation" x="35.5" y="53.5"/>
         </view>
     </objects>

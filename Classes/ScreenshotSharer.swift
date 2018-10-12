@@ -162,7 +162,7 @@ open class ScreenshotSharer: NSObject
     open func takeImageOf(view:UIView) -> UIImage
     {
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.isOpaque, 0.0);
-        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext();
