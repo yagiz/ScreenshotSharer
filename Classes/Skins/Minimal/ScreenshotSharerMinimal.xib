@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScreenshotSharerMinimal">
             <connections>
                 <outlet property="descriptionLabel" destination="aMz-bw-hSq" id="IdC-pk-MR9"/>
-                <outlet property="imageViewRatioConstraint" destination="qqM-nJ-FAc" id="yY0-k4-en6"/>
                 <outlet property="screenshotImageView" destination="qpO-zQ-ka1" id="AuN-We-ZIY"/>
                 <outlet property="shareButton" destination="gRF-T3-I8g" id="HkX-bd-rZC"/>
                 <outlet property="titleLabel" destination="EPz-5a-soC" id="kQI-vu-UOd"/>
@@ -70,20 +69,15 @@
                     <rect key="frame" x="15" y="59" width="345" height="448.5"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="315" placeholderIntrinsicHeight="315" translatesAutoresizingMaskIntoConstraints="NO" id="qpO-zQ-ka1">
-                            <rect key="frame" x="150.5" y="0.5" width="45.5" height="448"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="qpO-zQ-ka1" secondAttribute="height" multiplier="1:10" id="qqM-nJ-FAc"/>
-                            </constraints>
+                            <rect key="frame" x="0.0" y="0.0" width="345" height="448.5"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="qpO-zQ-ka1" firstAttribute="centerX" secondItem="YPN-qs-207" secondAttribute="centerX" id="DlO-EE-Ouf"/>
-                        <constraint firstItem="qpO-zQ-ka1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YPN-qs-207" secondAttribute="leading" id="I5J-0u-44S"/>
-                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qpO-zQ-ka1" secondAttribute="bottom" id="P40-lN-lEy"/>
-                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qpO-zQ-ka1" secondAttribute="trailing" id="m2Q-wi-7Aq"/>
-                        <constraint firstItem="qpO-zQ-ka1" firstAttribute="centerY" secondItem="YPN-qs-207" secondAttribute="centerY" id="m2w-2m-G4H"/>
-                        <constraint firstItem="qpO-zQ-ka1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="YPN-qs-207" secondAttribute="top" id="r5a-lT-byD"/>
+                        <constraint firstAttribute="bottom" secondItem="qpO-zQ-ka1" secondAttribute="bottom" id="0W6-AO-MY5"/>
+                        <constraint firstAttribute="trailing" secondItem="qpO-zQ-ka1" secondAttribute="trailing" id="Qlk-98-X3X"/>
+                        <constraint firstItem="qpO-zQ-ka1" firstAttribute="top" secondItem="YPN-qs-207" secondAttribute="top" id="bnD-Ns-ybJ"/>
+                        <constraint firstItem="qpO-zQ-ka1" firstAttribute="leading" secondItem="YPN-qs-207" secondAttribute="leading" id="zyI-b1-Knq"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0HK-Zu-TlD">

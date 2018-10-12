@@ -41,20 +41,6 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
     override open func setScreenshotImage(_ image: UIImage)
     {
         self.screenshotImageView.image = image
-        
-
-        let imageRatioNewConstraint = NSLayoutConstraint(item: self.imageViewRatioConstraint.firstItem,
-                                                           attribute: self.imageViewRatioConstraint.firstAttribute,
-                                                           relatedBy: self.imageViewRatioConstraint.relation,
-                                                           toItem: self.imageViewRatioConstraint.secondItem,
-                                                           attribute: self.imageViewRatioConstraint.secondAttribute,
-                                                           multiplier: image.size.width / image.size.height,
-                                                           constant: self.imageViewRatioConstraint.constant)
-        
-        self.screenshotImageView.removeConstraint(self.imageViewRatioConstraint)
-        self.screenshotImageView.addConstraint(imageRatioNewConstraint)
-        self.imageViewRatioConstraint = imageRatioNewConstraint
-        self.view.layoutIfNeeded()
     }
     
     
